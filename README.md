@@ -1,17 +1,17 @@
-# Welcome to Reactive !
+# Welcome to Reactoms !
 
 A React Components Library made with TypeScript, Sass & Vite
 
 
-[![NPM Version](https://badgen.net/npm/v/reactive)](https://www.npmjs.com/package/reactive)
-[![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactive)](https://github.com/philippebeck/reactive)
-[![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactive)](https://github.com/philippebeck/reactive/tree/master)
+[![NPM Version](https://badgen.net/npm/v/reactoms)](https://www.npmjs.com/package/reactoms)
+[![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
+[![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
 
-[![NPM Downloads](https://badgen.net/npm/dt/reactive)](https://www.npmjs.com/package/reactive)
-[![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactive)](https://github.com/philippebeck/reactive/commits/master)
+[![NPM Downloads](https://badgen.net/npm/dt/reactoms)](https://www.npmjs.com/package/reactoms)
+[![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
 
 
-- [Welcome to Reactive !](#welcome-to-reactive-)
+- [Welcome to Reactoms !](#welcome-to-reactoms-)
   - [Download](#download)
   - [Package](#package)
   - [Installation](#installation)
@@ -24,17 +24,17 @@ A React Components Library made with TypeScript, Sass & Vite
 
 ## Download
 
-`git clone https://github.com/philippebeck/reactive.git`  
+`git clone https://github.com/philippebeck/reactoms.git`  
 or  
-[Latest Release](https://github.com/philippebeck/reactive/releases)  
+[Latest Release](https://github.com/philippebeck/reactoms/releases)  
 
 ---
 
 ## Package
 
-NPM : `npm i reactive`  
+NPM : `npm i reactoms`  
 or  
-Yarn : `yarn add reactive`  
+Yarn : `yarn add reactoms`  
 
 ---
 
@@ -58,8 +58,8 @@ Run the Welcome UI to try the components :
 `$ npm run build`  
 
 2. Then use the compiles files of the dist folder for your prod UI like this :  
-  - inside your pages : `import { Card, Collapse, Icon, Image, Link, List, Title } from 'reactive'` for the components
-  - inside your index.html : `<style rel="stylesheet" href="node_modules/reactive/dist/style.css"></style>` for the style
+  - inside your pages : `import { Card, Collapse, Icon, Image, Link, List, Title } from 'reactoms'` for the components
+  - inside your index.html : `<style rel="stylesheet" href="node_modules/reactoms/dist/style.css"></style>` for the style
 
 ---
 ## Content
