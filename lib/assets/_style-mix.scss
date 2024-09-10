@@ -1,0 +1,19 @@
+@mixin font-face($font-family) {
+  @font-face {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local("#{$font-family}-Regular"),
+      url("/webfonts/#{$font-family}-Regular.woff2") format("woff2");
+  }
+}
+
+@mixin keyframes($key, $value) {
+  @keyframes #{$key} {
+    from {
+      transform: #{$value};
+    }
+  }
+}
