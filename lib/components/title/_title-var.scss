@@ -1,0 +1,43 @@
+//! ********** TITLE VARIABLES **********
+
+$gap: 5px;
+$margin: 20px;
+$title: 1.2rem;
+$subtitle: 0.7;
+
+$gap-ratios: (
+  "tn": 1.1,
+  "xs": 1.2,
+  "sm": 1.3,
+  "md": 1.4,
+  "lg": 1.5,
+  "xl": 1.6,
+  "wd": 1.7
+) !default;
+
+$margin-ratios: (
+  "tn": 1.2,
+  "xs": 1.4,
+  "sm": 1.6,
+  "md": 1.8,
+  "lg": 2,
+  "xl": 2.2,
+  "wd": 2.4
+) !default;
+
+$screen-ratios: (
+  "tn": 1.1,
+  "xs": 1.2,
+  "sm": 1.3,
+  "md": 1.4,
+  "lg": 1.5,
+  "xl": 1.6,
+  "wd": 1.7
+  ) !default;
+
+$title-ratios: (
+  "h1": 1.6,
+  "h2": 1.4,
+  "h3": 1.2,
+  "h4": 1
+  ) !default;
