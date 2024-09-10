@@ -1,6 +1,6 @@
 {
-  "name": "reactive",
-  "version": "0.1.1",
+  "name": "reactoms",
+  "version": "0.1.2",
   "description": "A React Components Library made with TypeScript, Sass & Vite",
   "type": "module",
   "keywords":[
@@ -50,6 +50,7 @@
     "vite": "^5.0.8",
     "vite-plugin-dts": "^4.2.1"
   },
+  "repository": "github:philippebeck/reactoms",
   "license": "Apache-2.0",
   "author":{
     "name": "Philippe Beck",
