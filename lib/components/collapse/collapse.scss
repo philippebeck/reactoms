@@ -1,0 +1,45 @@
+@import '../../assets/style';
+@import './collapse-var';
+@import './collapse-mix';
+
+//! ********** COLLAPSE **********
+
+.collapse {
+
+  & > figure {
+    margin: 20px;
+  }
+
+  &[open] summary,
+  summary:hover,
+  summary:focus {
+    background-color: $white;
+    color: $gray;
+  }
+
+  summary {
+    margin: auto;
+    border-radius: $radius;
+    padding: 10px;
+    width: $width;
+    list-style: none;
+    background-color: $secondary;
+    color: $black;
+    cursor: pointer;
+
+    :first-child {
+      margin: 0;
+      padding: 1px;
+    }
+
+    @each $breakpoint-key, $breakpoint-value in $breakpoints {
+      @media (min-width: $breakpoint-value) {
+
+        @include collapse(
+          map-get($radius-ratios, $breakpoint-key),
+          map-get($width-sizes, $breakpoint-key)
+        );
+      }
+    }
+  }
+}
