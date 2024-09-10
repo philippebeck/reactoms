@@ -1,0 +1,54 @@
+@import '../../assets/style';
+@import './title-var';
+@import './title-mix';
+
+//! ********** TITLE **********
+
+.title {
+  display: flex;
+  flex-flow: column;
+  gap: $gap;
+  margin: 0 0 $margin;
+  font-family: $serif;
+  text-align: center;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p {
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    & + p {
+      color: $silver;
+    }
+  }
+
+  @each $title-key, $title-value in $title-ratios {
+    @include title-font($title-key, $title-value);
+  }
+
+  @each $breakpoint-key, $breakpoint-value in $breakpoints {
+    @media (min-width: $breakpoint-value) {
+
+      @include title-size(
+        map-get($gap-ratios, $breakpoint-key),
+        map-get($margin-ratios, $breakpoint-key)
+      );
+
+      @each $screen-key, $screen-value in $screen-ratios {
+        @if $screen-key == $breakpoint-key {
+
+          @each $title-key, $title-value in $title-ratios {
+            @include title-font($title-key, $title-value, $screen-value);
+          }
+        }
+      }
+    }
+  }
+}
