@@ -23,7 +23,7 @@ const App = () => {
       />
 
       <Title
-        heading="Welcome to Reactive !"
+        heading="Welcome to Reactoms !"
         level={1}
         subtitle="A React Components Library made with TypeScript, Sass & Vite" />
 
