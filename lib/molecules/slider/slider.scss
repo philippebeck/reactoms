@@ -1,0 +1,53 @@
+@import '../../assets/style';
+@import './slider-var';
+@import './slider-mix';
+
+//! ********** SLIDER **********
+
+.slider {
+  position: relative;
+  margin: 0;
+  padding: 0 20px 32px;
+
+  & + * {
+    display: flex;
+    flex-flow: column;
+    place-content: center;
+    place-items: center;
+  }
+
+  nav {
+    i {
+      position: absolute;
+      color: $white;
+      cursor: pointer;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+      }
+    }
+
+    [class*="left"] {
+      left: 0;
+    }
+
+    [class*="right"] {
+      right: 0;
+    }
+
+    @include slider(36px, 8px, 0px, 1);
+
+    @each $breakpoint-key, $breakpoint-value in $breakpoints {
+      @media (min-width: $breakpoint-value) {
+
+        @include slider(
+          map-get($top-sizes, $breakpoint-key),
+          map-get($left-sizes, $breakpoint-key),
+          map-get($bottom-ratios, $breakpoint-key),
+          map-get($font-ratios, $breakpoint-key)
+        );
+      }
+    }
+  }
+}
