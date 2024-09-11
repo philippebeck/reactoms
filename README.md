@@ -69,13 +69,16 @@ Lib Assets :
 - **Style Variables** => *breakpoints, fonts, colors, transforms*  
 - **Style Mixins** => *font-face & keyframes*  
 
-Lib Components :  
+Lib Atoms :  
 - **Card** => *figure -> (figcaption)*  
 - **Collapse** => *details -> summary + figure*  
 - **Icon** => *i*  
 - **Image** => *img*  
 - **Link** => *a*  
 - **List** => *ul -> li*  
+
+Lib Molecules :  
+- **Slider** => *figure -> (nav) + progress*  
 - **Title** => *hgroup -> (p) + h1 | h2 | h3 | h4 + (p)*  
 
 Src Assets :  
