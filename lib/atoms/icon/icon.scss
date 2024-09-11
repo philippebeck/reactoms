@@ -1,0 +1,8 @@
+@import './icon-var';
+@import './icon-mix';
+
+//! ********** ICON **********
+
+@each $name, $color in $icons {
+  @include icon($name, $color);
+}
