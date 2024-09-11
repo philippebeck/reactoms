@@ -1,12 +1,13 @@
 import React from 'react'
 import { TitleProps } from "./TitleProps"
+import { Icon } from '../../atoms/icon/Icon'
 import "./title.scss"
 
 /**
- * ! TITLE COMPONENT
+ * ! TITLE MOLECULE COMPONENT
  * @name Title
  * @description Renders the Title with a Heading Text,
- *  an optional Level, an optional Prefix & an optional Subtitle
+ *  an optional Level, an optional Subtitle & an optional Icon
  *
  * @param {TitleProps} props
  *  The Properties of the Title
@@ -18,19 +19,19 @@ import "./title.scss"
  *  The Level of the Title
  *  @default 4
  *
- * @param {React.ReactElement|string} [props.prefix=""]
- *  The Prefix of the Title
- *  @default ""
- *
- * @param {React.ReactElement|string} [props.subtitle=""]
+ * @param {string} [props.subtitle=""]
  *  The Subtitle of the Title
  *  @default ""
+ *
+ * @param {IconProps|undefined} [props.icon=undefined]
+ *  The Icon of the Title
+ *  @default undefined
  *
  * @returns {React.ReactElement<HTMLHeadingElement>}
  *  The rendered Title
  */
 export const Title =
-  ({ heading, level = 4, prefix = "", subtitle = "" }: TitleProps):
+  ({ heading, level = 4, subtitle = "", icon = undefined }: TitleProps):
   React.ReactElement<HTMLHeadingElement> => {
 
     level = Number(level)
@@ -39,7 +40,7 @@ export const Title =
 
   return (
     <hgroup className="title">
-      {prefix && <p>{prefix}</p>}
+      {icon && <p>{React.createElement(Icon, icon)}</p>}
       {React.createElement(HeadingLevel, {}, heading)}
       {subtitle && <p>{subtitle}</p>}
     </hgroup>

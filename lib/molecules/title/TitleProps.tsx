@@ -1,3 +1,5 @@
+import { IconProps } from '../../atoms/icon/IconProps'
+
 /**
  * ! TITLE PROPS INTERFACE
  * @interface TitleProps
@@ -6,21 +8,21 @@
  * @property {string} heading
  *  The Text of the Title
  *
- * @property {number} [level = 4]
+ * @property {number} [level=4]
  *  The Level of the Title
  *  @default 4
  *
- * @property {React.ReactElement|string} [prefix=""]
- *  The Prefix of the Title
- *  @default ""
- *
- * @property {React.ReactElement|string} [subtitle=""]
+ * @property {string} [subtitle=""]
  *  The Subtitle of the Title
  *  @default ""
+ *
+ * @property {IconProps|undefined} [icon=undefined]
+ *  The Icon of the Title
+ *  @default undefined
  */
 export interface TitleProps {
   heading: string
   level?: number
-  prefix?: React.ReactElement | string
-  subtitle?: React.ReactElement | string
+  subtitle?: string
+  icon?: IconProps | undefined
 }
