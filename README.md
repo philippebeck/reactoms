@@ -7,7 +7,7 @@ A React Components Library made with TypeScript, Sass & Vite
 [![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
 [![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
 
-[![NPM Downloads](https://badgen.net/npm/dt/reactoms)](https://www.npmjs.com/package/reactoms)
+[![NPM Downloads](https://badgen.net/npm/dw/reactoms)](https://www.npmjs.com/package/reactoms)
 [![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
 
 
