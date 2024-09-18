@@ -2,22 +2,22 @@
  * ! LINK PROPS INTERFACE
  * @interface LinkProps
  * @description The Properties of the Link
- * 
+ *
  * @property {React.ReactElement|string} content
  *  The Content of the Link
  *
  * @property {string} url
  *  The URL of the Link
  *
- * @property {string} [props.design="link"]
+ * @property {string} [design="link"]
  *  The Design Class of the Link
  *  @default "link"
  *
- * @property {boolean} [props.label=""]
+ * @property {boolean} [label=""]
  *  The Aria Label of the Link
  *  @default ""
  *
- * @property {string} [props.title=""]
+ * @property {string} [title=""]
  *  The Title of the Link
  *  @default ""
  */
