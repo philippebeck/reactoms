@@ -78,6 +78,7 @@ Lib Atoms :
 - **List** => *ul -> li*  
 
 Lib Molecules :  
+- **Button** => *a -> i + (b)*  
 - **Slider** => *figure -> (nav) + progress*  
 - **Title** => *hgroup -> (p) + h1 | h2 | h3 | h4 + (p)*  
 
@@ -93,5 +94,5 @@ Src App :
 
 - [**TypeScript**](https://www.typescriptlang.org)  
 - [**React**](https://react.dev)  
-- [**Sass**](https://sass-lang.com)
-- [**Vite**](https://vitejs.dev)
+- [**Sass**](https://sass-lang.com)  
+- [**Vite**](https://vitejs.dev)  
