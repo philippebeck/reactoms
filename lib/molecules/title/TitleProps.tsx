@@ -5,24 +5,24 @@ import { IconProps } from '../../atoms/icon/IconProps'
  * @interface TitleProps
  * @description The Properties of the Title
  * 
- * @property {string} heading
+ * @property {string} txt
  *  The Text of the Title
  *
- * @property {number} [level=4]
+ * @property {number} [lvl=4]
  *  The Level of the Title
  *  @default 4
  *
- * @property {string} [subtitle=""]
+ * @property {string} [sub=""]
  *  The Subtitle of the Title
  *  @default ""
  *
- * @property {IconProps|undefined} [icon=undefined]
+ * @property {IconProps|undefined} [ico=undefined]
  *  The Icon of the Title
  *  @default undefined
  */
 export interface TitleProps {
-  heading: string
-  level?: number
-  subtitle?: string
-  icon?: IconProps | undefined
+  txt: string
+  lvl?: number
+  sub?: string
+  ico?: IconProps | undefined
 }
