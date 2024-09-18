@@ -1,0 +1,37 @@
+@import '../../assets/style';
+@import './button-var';
+@import './button-mix';
+
+//! ********** BUTTON **********
+
+.button {
+  width: fit-content;
+
+  &:hover,
+  &:focus {
+    color: $gray;
+    transform: scale(0.9);
+    transition: all 500ms;
+  }
+
+  b {
+    display: none;
+  }
+
+  @each $social-key, $social-value in $buttons {
+    @include button($social-key, $social-value);
+  }
+
+  @media (min-width: $sm) {
+    b {
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+
+  @media (min-width: $lg) {
+    b {
+      text-transform: capitalize;
+    }
+  }
+}

@@ -1,18 +1,25 @@
-import { Card } from './components/card/Card'
+import { Card } from './atoms/card/Card'
+import { Collapse } from './atoms/collapse/Collapse'
+import { Icon } from './atoms/icon/Icon'
+import { Image } from './atoms/image/Image'
+import { Link } from './atoms/link/Link'
+import { List } from './atoms/list/List'
 
-import { Collapse } from './components/collapse/Collapse'
-import { Icon } from './components/icon/Icon'
-import { Image } from './components/image/Image'
-import { Link } from './components/link/Link'
-import { List } from './components/list/List'
-import { Title } from './components/title/Title'
+import { Button } from './molecules/button/Button'
+import { Slider } from './molecules/slider/Slider'
+import { Title } from './molecules/title/Title'
 
 export {
+  //Atoms
   Card,
   Collapse,
   Icon,
   Image,
   Link,
   List,
+
+  //Molecules
+  Button,
+  Slider,
   Title
 }

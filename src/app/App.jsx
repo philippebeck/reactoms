@@ -1,29 +1,35 @@
-import { Card } from '../../lib/components/card/Card'
-import { Collapse } from '../../lib/components/collapse/Collapse'
-import { Icon } from '../../lib/components/icon/Icon'
-import { Image } from '../../lib/components/image/Image'
-import { Link } from '../../lib/components/link/Link'
-import { List } from '../../lib/components/list/List'
-import { Title } from '../../lib/components/title/Title'
+import { Card } from '../../lib/atoms/card/Card'
+import { Collapse } from '../../lib/atoms/collapse/Collapse'
+import { Icon } from '../../lib/atoms/icon/Icon'
+import { Image } from '../../lib/atoms/image/Image'
+import { Link } from '../../lib/atoms/link/Link'
+import { List } from '../../lib/atoms/list/List'
+
+import { Slider } from '../../lib/molecules/slider/Slider'
+import { Title } from '../../lib/molecules/title/Title'
 
 import tsLogo from '../assets/ts.svg'
 import reactLogo from '../assets/react.svg'
 import sassLogo from '../assets/sass.svg'
 import viteLogo from '../assets/vite.svg'
+
 import './app.css'
 
+/**
+ * ! APP FUNCTION COMPONENT
+ * @name App
+ * @description The homepage of the Reactoms library
+ *
+ * @returns {React.ReactElement<HTMLElement>}
+ *  The rendered Article with the lib components
+ */
 const App = () => {
 
   return (
     <article>
-      <Icon
-        name="user-ninja"
-        cat="solid"
-        option="10x"
-      />
 
       <Title
-        heading="Welcome to Reactoms !"
+        heading="Welcome to Reactoms!"
         level={1}
         subtitle="A React Components Library made with TypeScript, Sass & Vite" />
 
@@ -82,11 +88,59 @@ const App = () => {
         caption="Click on the TypeScript, React, Sass & Vite logos to learn more..."
       />
 
+      <Slider
+        array={[
+          <Icon
+            name="address-card"
+            cat="regular"
+            option="10x"
+          />,
+          <Icon
+            name="caret-down"
+            cat="solid"
+            option="10x"
+          />,
+          <Icon
+            name="icons"
+            cat="solid"
+            option="10x"
+          />,
+          <Icon
+            name="image"
+            cat="regular"
+            option="10x"
+          />,
+          <Icon
+            name="link"
+            cat="solid"
+            option="10x"
+          />,
+          <Icon
+            name="list"
+            cat="solid"
+            option="10x"
+          />,
+          <Icon
+            name="photo-film"
+            cat="solid"
+            option="10x"
+          />,
+          <Icon
+            name="heading"
+            cat="solid"
+            option="10x"
+          />
+        ]}
+      />
+
       <Collapse
         title="Edit src/App.jsx & save to test the components:"
         content={
           <List
-            array={["Card,", "Collapse,", "Icon,", "Image,", "Link,", "List,", "Title"]}
+            array={[
+              "Atoms: Card, Collapse, Icon, Image, Link, List",
+              "Molecules: Slider, Title"
+            ]}
           />
         }
       />

@@ -1,6 +1,6 @@
 {
   "name": "reactoms",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "A React Components Library made with TypeScript, Sass & Vite",
   "type": "module",
   "keywords":[
@@ -9,7 +9,16 @@
     "library",
     "typescript",
     "sass",
-    "vite"
+    "vite",
+    "card",
+    "collapse",
+    "icon",
+    "image",
+    "link",
+    "list",
+    "button",
+    "slider",
+    "title"
   ],
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
