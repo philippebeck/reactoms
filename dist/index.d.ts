@@ -1,6 +1,48 @@
 import { default as default_2 } from 'react';
 
 /**
+ * ! BUTTON MOLECULE COMPONENT
+ * @name Button
+ * @description Renders the Button that displays a Link with an Icon & a Text
+ *
+ * @param {ButtonProps} props
+ *  The Properties of the Button
+ *
+ * @param {LinkProps} props.link
+ *  The Link of the Button
+ *
+ * @param {string} props.ico
+ *  The Icon of the Button
+ *
+ * @param {string} props.txt
+ *  The Text of the Button
+ *
+ * @returns {React.ReactElement<HTMLLinkElement>}
+ *  The rendered Button
+ */
+export declare const Button: ({ link, ico, txt }: ButtonProps) => React.ReactElement<HTMLLinkElement>;
+
+/**
+ * ! BUTTON PROPS INTERFACE
+ * @interface ButtonProps
+ * @description The Properties of the Button
+ *
+ * @property {LinkProps} link
+ *  The Link of the Button
+ *
+ * @property {IconProps} ico
+ *  The Icon of the Button
+ *
+ * @property {string} txt
+ *  The Text of the Button
+ */
+declare interface ButtonProps {
+    link: LinkProps;
+    ico: IconProps;
+    txt: string;
+}
+
+/**
  * ! CARD ATOM COMPONENT
  * @name Card
  * @description Renders the Card with a Content & an optional Caption
@@ -226,15 +268,15 @@ export declare const Link: ({ content, url, design, label, title }: LinkProps) =
  * @property {string} url
  *  The URL of the Link
  *
- * @property {string} [props.design="link"]
+ * @property {string} [design="link"]
  *  The Design Class of the Link
  *  @default "link"
  *
- * @property {boolean} [props.label=""]
+ * @property {boolean} [label=""]
  *  The Aria Label of the Link
  *  @default ""
  *
- * @property {string} [props.title=""]
+ * @property {string} [title=""]
  *  The Title of the Link
  *  @default ""
  */
@@ -275,59 +317,97 @@ declare interface ListProps {
 }
 
 /**
- * ! TITLE COMPONENT
+ * ! SLIDER MOLECULE COMPONENT
+ * @name Slider
+ * @description Renders the Slider that displays an Array of items &
+ *  allows the user to navigate through or to watch them in auto sequence
+ *
+ * @param {SliderProps} props
+ *  The Properties of the Slider
+ *
+ * @param {Array<React.ReactElement>} props.array
+ *  The Items Array of the Slider
+ *
+ * @param {number} props.timer
+ *  The Timer of the Slider
+ *  @default 5000
+ *
+ * @return {React.ReactElement<HTMLElement>}
+ *  The rendered Slider
+ */
+export declare const Slider: ({ array, timer }: SliderProps) => React.ReactElement<HTMLElement>;
+
+/**
+ * ! SLIDER PROPS INTERFACE
+ * @interface SliderProps
+ * @description The Properties of the Slider
+ *
+ * @property {Array<React.ReactElement>} array
+ *  The Items Array of the Slider
+ *
+ * @property {number} [timer=5000]
+ *  The Timer of the Slider
+ *  @default 5000
+ */
+declare interface SliderProps {
+    array: Array<React.ReactElement>;
+    timer?: number;
+}
+
+/**
+ * ! TITLE MOLECULE COMPONENT
  * @name Title
- * @description Renders the Title with a Heading Text,
- *  an optional Level, an optional Prefix & an optional Subtitle
+ * @description Renders the Title with a Main Text,
+ *  an optional Level, an optional Subtitle & an optional Icon
  *
  * @param {TitleProps} props
  *  The Properties of the Title
  *
- * @param {string} props.heading
+ * @param {string} props.txt
  *  The Text of the Title
  *
- * @param {number} [props.level=4]
+ * @param {number} [props.lvl=4]
  *  The Level of the Title
  *  @default 4
  *
- * @param {React.ReactElement|string} [props.prefix=""]
- *  The Prefix of the Title
- *  @default ""
- *
- * @param {React.ReactElement|string} [props.subtitle=""]
+ * @param {string} [props.sub=""]
  *  The Subtitle of the Title
  *  @default ""
+ *
+ * @param {IconProps|undefined} [props.ico=undefined]
+ *  The Icon of the Title
+ *  @default undefined
  *
  * @returns {React.ReactElement<HTMLHeadingElement>}
  *  The rendered Title
  */
-export declare const Title: ({ heading, level, prefix, subtitle }: TitleProps) => default_2.ReactElement<HTMLHeadingElement>;
+export declare const Title: ({ txt, lvl, sub, ico }: TitleProps) => default_2.ReactElement<HTMLHeadingElement>;
 
 /**
  * ! TITLE PROPS INTERFACE
  * @interface TitleProps
  * @description The Properties of the Title
  *
- * @property {string} heading
+ * @property {string} txt
  *  The Text of the Title
  *
- * @property {number} [level = 4]
+ * @property {number} [lvl=4]
  *  The Level of the Title
  *  @default 4
  *
- * @property {React.ReactElement|string} [prefix=""]
- *  The Prefix of the Title
- *  @default ""
- *
- * @property {React.ReactElement|string} [subtitle=""]
+ * @property {string} [sub=""]
  *  The Subtitle of the Title
  *  @default ""
+ *
+ * @property {IconProps|undefined} [ico=undefined]
+ *  The Icon of the Title
+ *  @default undefined
  */
 declare interface TitleProps {
-    heading: string;
-    level?: number;
-    prefix?: React.ReactElement | string;
-    subtitle?: React.ReactElement | string;
+    txt: string;
+    lvl?: number;
+    sub?: string;
+    ico?: IconProps | undefined;
 }
 
 export { }
