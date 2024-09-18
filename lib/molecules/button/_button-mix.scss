@@ -1,0 +1,8 @@
+//! ********** BUTTON MIXIN **********
+
+@mixin button($icon, $color) {
+  .fa-#{$icon}:hover,
+  .fa-#{$icon}:focus {
+    color: $color;
+  }
+}
