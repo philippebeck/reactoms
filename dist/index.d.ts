@@ -115,6 +115,108 @@ declare interface CollapseProps {
 }
 
 /**
+ * ! GALLERY MOLECULE COMPONENT
+ * @name Gallery
+ * @description Renders the Gallery that displays
+ *  a list of links based on the provided array data
+ *
+ * @param {GalleryProps} props
+ *  The Properties of the Gallery
+ *
+ * @param {Array} props.array
+ *  The Items Array of the Gallery
+ *
+ * @param {string} props.array.url
+ *  The URL of the Item
+ *
+ * @param {string} props.array.name
+ *  The Name of the Item
+ *
+ * @param {string} props.array.detail
+ *  The Detail of the Item
+ *
+ * @param {Object} props.array.caption
+ *  The Caption of the Item
+ *
+ * @param {string} props.array.caption.title
+ *  The Title of the Item
+ *
+ * @param {Array} props.array.caption.technos
+ *  The Technologies of the Item Caption
+ *
+ * @param {Object} props.array.image
+ *  The Image of the Item
+ *
+ * @param {string} props.array.image.url
+ *  The URL of the Item Image
+ *
+ * @param {string} props.array.image.alt
+ *  The Alternative Text of the Item Image
+ *
+ * @return {React.ReactElement<HTMLUListElement>}
+ *  The rendered Links
+ */
+export declare const Gallery: ({ array }: GalleryProps) => React.ReactElement<HTMLUListElement>;
+
+/**
+ * ! GALLERY ITEM PROPS INTERFACE
+ * @interface GalleryItemProps
+ * @description The Properties of the Gallery Item
+ *
+ * @property {string} url
+ *  The URL of the Item
+ *
+ * @property {string} name
+ *  The Name of the Item
+ *
+ * @property {string} detail
+ *  The Detail of the Item
+ *
+ * @property {Object} caption
+ *  The Caption of the Item
+ *
+ * @property {string} caption.title
+ *  The Title of the Item Caption
+ *
+ * @property {Array} caption.technos
+ *  The Technologies of the Item Caption
+ *
+ * @property {Object} image
+ *  The Image of the Item
+ *
+ * @property {string} image.url
+ *  The URL of the Item Image
+ *
+ * @property {string} image.alt
+ *  The Alternative Text of the Item Image
+ */
+declare interface GalleryItemProps {
+    url: string;
+    name?: string;
+    detail?: string;
+    caption?: {
+        title: string;
+        technos?: string[];
+    };
+    image?: {
+        url: string;
+        alt: string;
+    };
+}
+
+/**
+ * ! GALLERY PROPS INTERFACE
+ * @interface GalleryProps
+ * @description The Properties of the Gallery
+ *
+ * @property {Array<GalleryItemProps>} array
+ *  The Items Array of the Gallery
+ */
+declare interface GalleryProps {
+    array: Array<GalleryItemProps>;
+}
+
+/**
  * ! ICON ATOM COMPONENT
  * @name Icon
  * @description Renders the Icon with a Name, an optional Category,
