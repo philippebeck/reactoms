@@ -50,7 +50,7 @@ declare interface ButtonProps {
  * @param {CardProps} props
  *  The Properties of the Card
  *
- * @param {React.ReactElement} props.content
+ * @param {React.ReactElement|undefined} props.content
  *  The Content of the Card
  *
  * @param {React.ReactElement|string} [props.caption=""]
@@ -67,7 +67,7 @@ export declare const Card: ({ content, caption }: CardProps) => React.ReactEleme
  * @interface CardProps
  * @description The Properties of the Card
  *
- * @property {React.ReactElement} content
+ * @property {React.ReactElement|undefined} content
  *  The Content of the Card
  *
  * @property {React.ReactElement|string} [caption=""]
@@ -75,7 +75,7 @@ export declare const Card: ({ content, caption }: CardProps) => React.ReactEleme
  *  @default ""
  */
 declare interface CardProps {
-    content: React.ReactElement;
+    content: React.ReactElement | undefined;
     caption?: React.ReactElement | string;
 }
 
@@ -296,7 +296,7 @@ declare interface LinkProps {
  * @param {ListProps} props
  *  The Properties of the List
  *
- * @param {Array} props.array
+ * @param {React.ReactElement[]|string[]} props.array
  *  The Array of items to render in the List
  *
  * @return {React.ReactElement<HTMLUListElement>}
@@ -309,11 +309,11 @@ export declare const List: ({ array }: ListProps) => React.ReactElement<HTMLULis
  * @interface ListProps
  * @description The Properties of the List
  *
- * @property {Array} array
+ * @property {React.ReactElement[]|string[]} array
  *  The Items Array of the List
  */
 declare interface ListProps {
-    array: string[];
+    array: React.ReactElement[] | string[];
 }
 
 /**
