@@ -1,0 +1,40 @@
+@import '../../assets/style';
+@import './footer-var';
+@import './footer-mix';
+
+//! ********** FOOTER **********
+
+.footer {
+  display: flex;
+  place-content: center;
+  position: fixed;
+  z-index: 1000;
+  bottom: 5px;
+  width: 100%;
+
+  li {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    border: solid 2px $silver;
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    font-size: $font;
+    background-color: $white;
+
+    i {
+      color: $gray;
+    }
+
+    @each $breakpoint-key, $breakpoint-value in $breakpoints {
+      @media (min-width: $breakpoint-value) {
+
+        @include footer(
+          map-get($block-sizes, $breakpoint-key),
+          map-get($font-ratios, $breakpoint-key)
+        );
+      }
+    }
+  }
+}

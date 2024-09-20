@@ -1,0 +1,7 @@
+//! ********** FOOTER MIXIN **********
+
+@mixin footer($block-size, $font-ratio) {
+  width: calc($size + $block-size);
+  height: calc($size + $block-size);
+  font-size: calc($font * $font-ratio);
+}

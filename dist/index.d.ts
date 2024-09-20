@@ -115,6 +115,34 @@ declare interface CollapseProps {
 }
 
 /**
+ * ! FOOTER MOLECULE COMPONENT
+ * @name Footer
+ * @description Renders the Footer with an Items Array as an unordered list
+ *
+ * @param {FooterProps} props
+ *  The Properties of the Footer
+ *
+ * @param {Array<ButtonProps>} props.array
+ *  The Items Array of the Footer
+ *
+ * @returns {React.ReactElement<HTMLElement>}
+ *  The rendered Footer
+ */
+export declare const Footer: ({ array }: FooterProps) => React.ReactElement<HTMLElement>;
+
+/**
+ * ! FOOTER PROPS INTERFACE
+ * @interface FooterProps
+ * @description The Properties of the Footer
+ *
+ * @property {Array<ButtonProps>} array
+ *  The Items Array of the Footer
+ */
+declare interface FooterProps {
+    array: Array<ButtonProps>;
+}
+
+/**
  * ! GALLERY MOLECULE COMPONENT
  * @name Gallery
  * @description Renders the Gallery that displays
@@ -416,6 +444,34 @@ export declare const List: ({ array }: ListProps) => React.ReactElement<HTMLULis
  */
 declare interface ListProps {
     array: React.ReactElement[] | string[];
+}
+
+/**
+ * ! NAVBAR MOLECULE COMPONENT
+ * @name Navbar
+ * @description Renders the Navbar with an Items Array as an unordered list
+ *
+ * @param {NavbarProps} props
+ *  The Properties of the Navbar
+ *
+ * @param {Array<ButtonProps>} props.array
+ *  The Items Array of the Navbar
+ *
+ * @returns {React.ReactElement<HTMLElement>}
+ *  The rendered Navbar
+ */
+export declare const Navbar: ({ array }: NavbarProps) => React.ReactElement<HTMLElement>;
+
+/**
+ * ! NAVBAR PROPS INTERFACE
+ * @interface NavbarProps
+ * @description The Properties of the Navbar
+ *
+ * @property {Array<ButtonProps>} array
+ *  The Items Array of the Navbar
+ */
+declare interface NavbarProps {
+    array: Array<ButtonProps>;
 }
 
 /**
