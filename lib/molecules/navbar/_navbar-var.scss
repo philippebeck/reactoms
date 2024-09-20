@@ -1,0 +1,35 @@
+//! ********** NAVBAR VARIABLES **********
+
+$padding-x: 10px;
+$padding-y: 2px;
+$font: 0.7rem;
+
+$padding-sizes: (
+  "tn": 1px,
+  "xs": 2px,
+  "sm": 3px,
+  "md": 4px,
+  "lg": 5px,
+  "xl": 6px,
+  "wd": 7px
+) !default;
+
+$padding-ratios: (
+  "tn": 2,
+  "xs": 3,
+  "sm": 4,
+  "md": 0,
+  "lg": 0,
+  "xl": 0,
+  "wd": 0
+) !default;
+
+$font-sizes: (
+  "tn": 0.1rem,
+  "xs": 0.2rem,
+  "sm": 0.3rem,
+  "md": 0.4rem,
+  "lg": 0.5rem,
+  "xl": 0.6rem,
+  "wd": 0.7rem
+) !default;
