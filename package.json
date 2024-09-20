@@ -1,6 +1,6 @@
 {
   "name": "reactoms",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A React Components Library made with TypeScript, Sass & Vite",
   "type": "module",
   "keywords":[
