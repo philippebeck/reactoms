@@ -1,0 +1,13 @@
+@import '../../assets/style';
+@import './gallery-var';
+@import './gallery-mix';
+
+//! ********** GALLERY **********
+
+@each $breakpoint-key, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+
+    @include gallery(map-get($width-sizes, $breakpoint-key),
+      map-get($width-ratios, $breakpoint-key));
+  }
+}
