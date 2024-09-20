@@ -6,6 +6,7 @@ import { Link } from './atoms/link/Link'
 import { List } from './atoms/list/List'
 
 import { Button } from './molecules/button/Button'
+import { Gallery } from './molecules/gallery/Gallery'
 import { Slider } from './molecules/slider/Slider'
 import { Title } from './molecules/title/Title'
 
@@ -20,6 +21,7 @@ export {
 
   //Molecules
   Button,
+  Gallery,
   Slider,
   Title
 }
