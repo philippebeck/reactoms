@@ -76,9 +76,10 @@ Lib Atoms :
 - **List** => *ul -> li*  
 
 Lib Molecules :  
-- **Button** => *a -> i + (b)*  
-- **Slider** => *figure -> (nav) + progress*  
-- **Title** => *hgroup -> (p) + h1 | h2 | h3 | h4 + (p)*  
+- **Button** => *Link -> Icon + (b)*  
+- **Gallery** => *List -> Link -> (Card -> Image + Title + List -> Icon)*
+- **Slider** => *figure -> (nav -> Icon) + progress*  
+- **Title** => *hgroup -> (p -> Icon) + h1 | h2 | h3 | h4 + (p)*  
 
 Src Assets :  
 - **Logos** => *ts, react, sass, vite*
