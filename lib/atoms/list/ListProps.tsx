@@ -3,9 +3,9 @@
  * @interface ListProps
  * @description The Properties of the List
  * 
- * @property {Array} array
+ * @property {React.ReactElement[]|string[]} array
  *  The Items Array of the List
  */
 export interface ListProps {
-  array: string[]
+  array: React.ReactElement[] | string[]
 }

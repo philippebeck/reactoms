@@ -9,7 +9,7 @@ import './card.scss'
  * @param {CardProps} props
  *  The Properties of the Card
  *
- * @param {React.ReactElement} props.content
+ * @param {React.ReactElement|undefined} props.content
  *  The Content of the Card
  *
  * @param {React.ReactElement|string} [props.caption=""]

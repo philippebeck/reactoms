@@ -3,7 +3,7 @@
  * @interface CardProps
  * @description The Properties of the Card
  *
- * @property {React.ReactElement} content
+ * @property {React.ReactElement|undefined} content
  *  The Content of the Card
  *
  * @property {React.ReactElement|string} [caption=""]
@@ -11,6 +11,6 @@
  *  @default ""
  */
 export interface CardProps {
-  content: React.ReactElement
+  content: React.ReactElement | undefined
   caption?: React.ReactElement | string
 }

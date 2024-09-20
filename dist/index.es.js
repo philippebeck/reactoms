@@ -13,7 +13,7 @@ var Ce;
 function pr() {
   if (Ce) return W;
   Ce = 1;
-  var f = K, o = Symbol.for("react.element"), l = Symbol.for("react.fragment"), h = Object.prototype.hasOwnProperty, d = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, m = { key: !0, ref: !0, __self: !0, __source: !0 };
+  var f = K, o = Symbol.for("react.element"), c = Symbol.for("react.fragment"), h = Object.prototype.hasOwnProperty, d = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, m = { key: !0, ref: !0, __self: !0, __source: !0 };
   function T(j, b, O) {
     var y, p = {}, S = null, Y = null;
     O !== void 0 && (S = "" + O), b.key !== void 0 && (S = "" + b.key), b.ref !== void 0 && (Y = b.ref);
@@ -21,7 +21,7 @@ function pr() {
     if (j && j.defaultProps) for (y in b = j.defaultProps, b) p[y] === void 0 && (p[y] = b[y]);
     return { $$typeof: o, type: j, key: S, ref: Y, props: p, _owner: d.current };
   }
-  return W.Fragment = l, W.jsx = T, W.jsxs = T, W;
+  return W.Fragment = c, W.jsx = T, W.jsxs = T, W;
 }
 var N = {};
 /**
@@ -36,7 +36,7 @@ var N = {};
 var Pe;
 function gr() {
   return Pe || (Pe = 1, process.env.NODE_ENV !== "production" && function() {
-    var f = K, o = Symbol.for("react.element"), l = Symbol.for("react.portal"), h = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), m = Symbol.for("react.profiler"), T = Symbol.for("react.provider"), j = Symbol.for("react.context"), b = Symbol.for("react.forward_ref"), O = Symbol.for("react.suspense"), y = Symbol.for("react.suspense_list"), p = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), Y = Symbol.for("react.offscreen"), te = Symbol.iterator, ke = "@@iterator";
+    var f = K, o = Symbol.for("react.element"), c = Symbol.for("react.portal"), h = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), m = Symbol.for("react.profiler"), T = Symbol.for("react.provider"), j = Symbol.for("react.context"), b = Symbol.for("react.forward_ref"), O = Symbol.for("react.suspense"), y = Symbol.for("react.suspense_list"), p = Symbol.for("react.memo"), S = Symbol.for("react.lazy"), Y = Symbol.for("react.offscreen"), te = Symbol.iterator, ke = "@@iterator";
     function Ae(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -90,7 +90,7 @@ function gr() {
       switch (e) {
         case h:
           return "Fragment";
-        case l:
+        case c:
           return "Portal";
         case m:
           return "Profiler";
@@ -628,37 +628,37 @@ React keys must be passed directly to JSX without using spread:
   }()), N;
 }
 process.env.NODE_ENV === "production" ? re.exports = pr() : re.exports = gr();
-var c = re.exports;
-const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure", { className: "card", children: [
+var l = re.exports;
+const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ l.jsxs("figure", { className: "card", children: [
   f,
-  o && /* @__PURE__ */ c.jsx("figcaption", { children: o })
-] }), yr = ({ title: f, content: o }) => /* @__PURE__ */ c.jsxs("details", { className: "collapse", children: [
-  /* @__PURE__ */ c.jsx("summary", { children: f }),
-  /* @__PURE__ */ c.jsx("figure", { children: o })
-] }), L = ({ name: f, cat: o = "brands", option: l = "2x", isHidden: h = !0, event: d = void 0 }) => /* @__PURE__ */ c.jsx(
+  o && /* @__PURE__ */ l.jsx("figcaption", { children: o })
+] }), yr = ({ title: f, content: o }) => /* @__PURE__ */ l.jsxs("details", { className: "collapse", children: [
+  /* @__PURE__ */ l.jsx("summary", { children: f }),
+  /* @__PURE__ */ l.jsx("figure", { children: o })
+] }), L = ({ name: f, cat: o = "brands", option: c = "2x", isHidden: h = !0, event: d = void 0 }) => /* @__PURE__ */ l.jsx(
   "i",
   {
-    ...d ? { className: `fa-${o} fa-${f} fa-${l}` } : { className: `fa-${o} fa-${f} fa-${l} fa-fw` },
+    ...d ? { className: `fa-${o} fa-${f} fa-${c}` } : { className: `fa-${o} fa-${f} fa-${c} fa-fw` },
     "aria-hidden": h,
     ...d ? { onClick: (m) => d(m) } : {},
     ...d ? { onKeyDown: (m) => d(m) } : {},
     ...d ? { tabIndex: 0 } : {}
   }
-), Er = ({ url: f, alt: o, design: l = "image" }) => /* @__PURE__ */ c.jsx(
+), Er = ({ url: f, alt: o, design: c = "image" }) => /* @__PURE__ */ l.jsx(
   "img",
   {
     src: f,
     alt: o,
-    className: l,
+    className: c,
     loading: "lazy"
   }
-), hr = ({ content: f, url: o, design: l = "link", label: h = "", title: d = "" }) => {
+), hr = ({ content: f, url: o, design: c = "link", label: h = "", title: d = "" }) => {
   const m = o.startsWith("https");
-  return /* @__PURE__ */ c.jsx(
+  return /* @__PURE__ */ l.jsx(
     "a",
     {
       href: o,
-      className: `${l}`,
+      className: `${c}`,
       ...h ? { "aria-label": h } : {},
       ...d ? { title: d } : {},
       ...m ? { rel: "noopener noreferrer" } : {},
@@ -666,18 +666,18 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
       children: f
     }
   );
-}, Rr = ({ array: f }) => /* @__PURE__ */ c.jsx("ul", { className: "list", children: f.map(
-  (o, l) => /* @__PURE__ */ c.jsx("li", { children: o }, l)
-) }), _r = ({ link: f, ico: o, txt: l }) => {
+}, Rr = ({ array: f }) => /* @__PURE__ */ l.jsx("ul", { className: "list", children: f.map(
+  (o, c) => /* @__PURE__ */ l.jsx("li", { children: /* @__PURE__ */ l.jsx(l.Fragment, { children: o }) }, c)
+) }), _r = ({ link: f, ico: o, txt: c }) => {
   const { url: h, label: d } = f, { name: m, cat: T, option: j } = o;
-  return /* @__PURE__ */ c.jsx(
+  return /* @__PURE__ */ l.jsx(
     hr,
     {
       url: h,
       label: d,
       design: "link button",
-      content: /* @__PURE__ */ c.jsxs(c.Fragment, { children: [
-        /* @__PURE__ */ c.jsx(
+      content: /* @__PURE__ */ l.jsxs(l.Fragment, { children: [
+        /* @__PURE__ */ l.jsx(
           L,
           {
             name: m,
@@ -687,19 +687,19 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
             event: void 0
           }
         ),
-        l && /* @__PURE__ */ c.jsx("b", { children: l })
+        c && /* @__PURE__ */ l.jsx("b", { children: c })
       ] })
     }
   );
 }, jr = ({ array: f, timer: o = 5e3 }) => {
-  const l = f.length, [h, d] = Oe(0), m = () => d((p) => (p + 1) % l), T = () => d((p) => (p - 1 + l) % l);
+  const c = f.length, [h, d] = Oe(0), m = () => d((p) => (p + 1) % c), T = () => d((p) => (p - 1 + c) % c);
   //! ********** AUTOPLAY **********
   let [j, b] = Oe(o !== 0);
   const O = () => b((p) => !p);
   Se(() => {
     let p;
     return j && (p = setInterval(() => m(), o)), () => clearInterval(p);
-  }, [j, l]);
+  }, [j, c]);
   //! ********** KEYBOARD EVENTS **********
   const y = (p) => {
     switch (p.key) {
@@ -721,7 +721,7 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
     document.removeEventListener("keydown", y);
   }), []);
   //! ********** RENDER **********
-  return /* @__PURE__ */ c.jsxs(
+  return /* @__PURE__ */ l.jsxs(
     "figure",
     {
       className: "slider",
@@ -729,8 +729,8 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
       "aria-label": "slider",
       children: [
         f[h],
-        l > 1 && /* @__PURE__ */ c.jsxs("nav", { children: [
-          /* @__PURE__ */ c.jsx(
+        c > 1 && /* @__PURE__ */ l.jsxs("nav", { children: [
+          /* @__PURE__ */ l.jsx(
             L,
             {
               name: "chevron-left",
@@ -739,7 +739,7 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
               event: T
             }
           ),
-          /* @__PURE__ */ c.jsx(
+          /* @__PURE__ */ l.jsx(
             L,
             {
               name: "chevron-right",
@@ -748,7 +748,7 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
               event: m
             }
           ),
-          /* @__PURE__ */ c.jsx(
+          /* @__PURE__ */ l.jsx(
             L,
             {
               name: j ? "pause" : "play",
@@ -758,17 +758,17 @@ const br = ({ content: f, caption: o = "" }) => /* @__PURE__ */ c.jsxs("figure",
             }
           )
         ] }),
-        /* @__PURE__ */ c.jsx("progress", { value: (h + 1) / l })
+        /* @__PURE__ */ l.jsx("progress", { value: (h + 1) / c })
       ]
     }
   );
-}, xr = ({ txt: f, lvl: o = 4, sub: l = "", ico: h = void 0 }) => {
+}, xr = ({ txt: f, lvl: o = 4, sub: c = "", ico: h = void 0 }) => {
   o = Number(o), (o < 1 || o > 3) && (o = 4);
   const d = `h${o}`;
-  return /* @__PURE__ */ c.jsxs("hgroup", { className: "title", children: [
-    h && /* @__PURE__ */ c.jsx("p", { children: K.createElement(L, h) }),
+  return /* @__PURE__ */ l.jsxs("hgroup", { className: "title", children: [
+    h && /* @__PURE__ */ l.jsx("p", { children: K.createElement(L, h) }),
     K.createElement(d, {}, f),
-    l && /* @__PURE__ */ c.jsx("p", { children: l })
+    c && /* @__PURE__ */ l.jsx("p", { children: c })
   ] });
 };
 export {

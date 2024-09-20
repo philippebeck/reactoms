@@ -4,12 +4,10 @@ A React Components Library made with TypeScript, Sass & Vite
 
 
 [![NPM Version](https://badgen.net/npm/v/reactoms)](https://www.npmjs.com/package/reactoms)
-[![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
-[![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
-
-[![NPM Downloads](https://badgen.net/npm/dw/reactoms)](https://www.npmjs.com/package/reactoms)
 [![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
 
+[![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
+[![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
 
 - [Welcome to Reactoms !](#welcome-to-reactoms-)
   - [Download](#download)
@@ -78,9 +76,10 @@ Lib Atoms :
 - **List** => *ul -> li*  
 
 Lib Molecules :  
-- **Button** => *a -> i + (b)*  
-- **Slider** => *figure -> (nav) + progress*  
-- **Title** => *hgroup -> (p) + h1 | h2 | h3 | h4 + (p)*  
+- **Button** => *Link -> Icon + (b)*  
+- **Gallery** => *List -> Link -> (Card -> Image + Title + List -> Icon)*
+- **Slider** => *figure -> (nav -> Icon) + progress*  
+- **Title** => *hgroup -> (p -> Icon) + h1 | h2 | h3 | h4 + (p)*  
 
 Src Assets :  
 - **Logos** => *ts, react, sass, vite*

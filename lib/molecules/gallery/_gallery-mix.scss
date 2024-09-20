@@ -1,0 +1,9 @@
+//! ********** GALLERY MIXIN **********
+
+@mixin gallery($size, $ratio) {
+  [id=blog] .collapse li,
+  [id=portfolio] .collapse figure > * > li {
+    width: calc((100% - ($ratio - 1) * $size) / $ratio
+    );
+  }
+}

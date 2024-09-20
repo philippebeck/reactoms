@@ -22,7 +22,7 @@
  *  @default ""
  */
 export interface LinkProps {
-  content: React.ReactElement|string
+  content: React.ReactElement | string
   url: string
   design?: string
   label?: string
