@@ -61,7 +61,7 @@ export const Gallery =
     const itemProps = {
       url: item.url,
       title: item.detail ? item.detail : undefined,
-      design: 'btn',
+      design: 'link',
       content: (
         <Card
           caption={item.caption && <Title txt={item.caption.title} />}
@@ -72,6 +72,7 @@ export const Gallery =
 
     if (item.name) {
       itemProps.content = <>{item.name}</>
+      itemProps.design = 'btn'
 
     } else if (item.caption && item.caption.technos) {
       itemProps.content = (
