@@ -9,7 +9,7 @@ import "./list.scss"
  * @param {ListProps} props
  *  The Properties of the List
  * 
- * @param {Array} props.array
+ * @param {React.ReactElement[]|string[]} props.array
  *  The Array of items to render in the List
  *
  * @return {React.ReactElement<HTMLUListElement>}
@@ -22,7 +22,9 @@ export const List =
   return (
     <ul className="list">
       {array.map((item, index) => 
-        <li key={index}>{item}</li>
+        <li key={index}>
+          <>{item}</>
+        </li>
       )}
     </ul>
   )
