@@ -23,8 +23,8 @@ import "./slider.scss";
  *  The rendered Slider
  */
 export const Slider =
-  ({ array, timer = 5000 }: SliderProps)
-  : React.ReactElement<HTMLElement> => {
+  ({ array, timer = 5000 }: SliderProps) :
+  React.ReactElement<HTMLElement> => {
 
   const LENGTH: number = array.length;
 
