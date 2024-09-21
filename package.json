@@ -1,7 +1,7 @@
 {
   "name": "reactoms",
-  "version": "0.4.0",
-  "description": "A React Components Library made with TypeScript, Sass & Vite",
+  "version": "0.4.1",
+  "description": "A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Card, Collapse, Icon, Image, Link, List for Atoms & Button, Footer, Gallery, Navbar, Slider, Title for Molecules",
   "type": "module",
   "keywords":[
     "react",
@@ -10,6 +10,7 @@
     "typescript",
     "sass",
     "vite",
+    "atomic design",
     "card",
     "collapse",
     "icon",
@@ -17,6 +18,9 @@
     "link",
     "list",
     "button",
+    "footer",
+    "gallery",
+    "navbar",
     "slider",
     "title"
   ],

@@ -1,7 +1,6 @@
 # Welcome to Reactoms !
 
-A React Components Library made with TypeScript, Sass & Vite
-
+A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Card, Collapse, Icon, Image, Link, List for Atoms & Button, Footer, Gallery, Navbar, Slider, Title for Molecules
 
 [![NPM Version](https://badgen.net/npm/v/reactoms)](https://www.npmjs.com/package/reactoms)
 [![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
@@ -9,10 +8,14 @@ A React Components Library made with TypeScript, Sass & Vite
 [![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
 [![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ee9874423b24e0082a00d406627d9c2)](https://app.codacy.com/gh/philippebeck/reactoms/dashboard)
+[![Maintainability](https://api.codeclimate.com/v1/badges/59a03533d053fcf1ecbc/maintainability)](https://codeclimate.com/github/philippebeck/reactoms/maintainability)
+
 - [Welcome to Reactoms !](#welcome-to-reactoms-)
-  - [Download](#download)
-  - [Package](#package)
   - [Installation](#installation)
+  - [NPM](#npm)
+  - [CDN](#cdn)
+  - [GitHub](#github)
   - [Try](#try)
   - [Usage](#usage)
   - [Content](#content)
@@ -20,7 +23,33 @@ A React Components Library made with TypeScript, Sass & Vite
 
 ---
 
-## Download
+## Installation
+
+Choose one of the following methods :  
+- **NPM** => *Node Package Manager*  
+- **CDN** => *Content Delivery Network*  
+- **GitHub** => *Clone the repository or download the latest release*  
+
+---
+
+## NPM
+
+Type this command inside your terminal at the root of your project :  
+`npm i reactoms`  
+
+---
+
+## CDN
+
+Add this stylesheet to the head of your index.html :  
+`https://cdn.jsdelivr.net/npm/reactoms@0.4.0/dist/style.min.css`  
+
+Add this script at the end of the body of your index.html :  
+`https://cdn.jsdelivr.net/npm/reactoms@0.4.0/dist/index.umd.min.js`  
+
+---
+
+## GitHub
 
 `git clone https://github.com/philippebeck/reactoms.git`  
 or  
@@ -28,32 +57,19 @@ or
 
 ---
 
-## Package
-
-NPM : `npm i reactoms`  
-or  
-Yarn : `yarn add reactoms`  
-
----
-
-## Installation
-
-Install the dependencies :  
-`$ npm i`  
-
----
-
 ## Try
 
 Run the Welcome UI to try the components :  
-`$ npm start`  
+`npm start`  
 
 ---
 
 ## Usage
 
+Process usage after NPM installation :  
+
 1. If you change the components code, you need to compile them :  
-`$ npm run build`  
+`npm run build`  
 
 2. Then use the compiles files of the dist folder for your prod UI like this :  
   - inside your pages : `import { Card, Collapse, Icon, Image, Link, List, Title } from 'reactoms'` for the components
