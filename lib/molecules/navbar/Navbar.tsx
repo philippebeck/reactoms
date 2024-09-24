@@ -6,31 +6,49 @@ import './navbar.scss'
 /**
  * ! NAVBAR MOLECULE COMPONENT
  * @name Navbar
- * @description Renders the Navbar with an Items Array as an unordered list
+ * @description Renders the Navbar with a Brand, an Links Array as an unordered list & an Option
  * 
  * @param {NavbarProps} props
  *  The Properties of the Navbar
  *
- * @param {Array<ButtonProps>} props.array
- *  The Items Array of the Navbar
+ * @param {ButtonProps} props.brand
+ *  The Brand of the Navbar
+ *
+ * @param {Array<ButtonProps>} props.links
+ *  The Links of the Navbar
+ *
+ * @param {ButtonProps} props.contact
+ *  The Contact of the Navbar
  *
  * @returns {React.ReactElement<HTMLElement>}
  *  The rendered Navbar
  */
 export const Navbar =
-  ({ array }: NavbarProps) :
+  ({ brand, links, contact }: NavbarProps) :
   React.ReactElement<HTMLElement> => {
 
   return (
     <nav className="navbar">
+      <Button
+        link={brand.link}
+        ico={brand.ico}
+        txt=""
+      />
+
       <List
-        array={array.map((item) =>
+        array={links.map((item) =>
           <Button
             link={item.link}
             ico={item.ico}
             txt={item.txt}
           />
         )}
+      />
+
+      <Button
+        link={contact.link}
+        ico={contact.ico}
+        txt=""
       />
     </nav>
   )
