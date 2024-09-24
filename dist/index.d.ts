@@ -117,29 +117,29 @@ declare interface CollapseProps {
 /**
  * ! FOOTER MOLECULE COMPONENT
  * @name Footer
- * @description Renders the Footer with an Items Array as an unordered list
+ * @description Renders the Footer with a Links Array as an unordered list
  *
  * @param {FooterProps} props
  *  The Properties of the Footer
  *
- * @param {Array<ButtonProps>} props.array
- *  The Items Array of the Footer
+ * @param {Array<ButtonProps>} props.links
+ *  The Links of the Footer
  *
  * @returns {React.ReactElement<HTMLElement>}
  *  The rendered Footer
  */
-export declare const Footer: ({ array }: FooterProps) => React.ReactElement<HTMLElement>;
+export declare const Footer: ({ links }: FooterProps) => React.ReactElement<HTMLElement>;
 
 /**
  * ! FOOTER PROPS INTERFACE
  * @interface FooterProps
  * @description The Properties of the Footer
  *
- * @property {Array<ButtonProps>} array
- *  The Items Array of the Footer
+ * @property {Array<ButtonProps>} links
+ *  The Links Array of the Footer
  */
 declare interface FooterProps {
-    array: Array<ButtonProps>;
+    links: Array<ButtonProps>;
 }
 
 /**
@@ -449,29 +449,43 @@ declare interface ListProps {
 /**
  * ! NAVBAR MOLECULE COMPONENT
  * @name Navbar
- * @description Renders the Navbar with an Items Array as an unordered list
+ * @description Renders the Navbar with a Brand, an Links Array as an unordered list & an Option
  *
  * @param {NavbarProps} props
  *  The Properties of the Navbar
  *
- * @param {Array<ButtonProps>} props.array
- *  The Items Array of the Navbar
+ * @param {ButtonProps} props.brand
+ *  The Brand of the Navbar
+ *
+ * @param {Array<ButtonProps>} props.links
+ *  The Links of the Navbar
+ *
+ * @param {ButtonProps} props.contact
+ *  The Contact of the Navbar
  *
  * @returns {React.ReactElement<HTMLElement>}
  *  The rendered Navbar
  */
-export declare const Navbar: ({ array }: NavbarProps) => React.ReactElement<HTMLElement>;
+export declare const Navbar: ({ brand, links, contact }: NavbarProps) => React.ReactElement<HTMLElement>;
 
 /**
  * ! NAVBAR PROPS INTERFACE
  * @interface NavbarProps
  * @description The Properties of the Navbar
  *
- * @property {Array<ButtonProps>} array
- *  The Items Array of the Navbar
+ * @property {ButtonProps} brand
+ *  The Brand of the Navbar
+ *
+ * @property {Array<ButtonProps>} links
+ *  The Links of the Navbar
+ *
+ * @property {ButtonProps} contact
+ *  The Contact of the Navbar
  */
 declare interface NavbarProps {
-    array: Array<ButtonProps>;
+    brand: ButtonProps;
+    links: Array<ButtonProps>;
+    contact: ButtonProps;
 }
 
 /**
