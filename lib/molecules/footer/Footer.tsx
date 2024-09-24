@@ -6,25 +6,25 @@ import './footer.scss'
 /**
  * ! FOOTER MOLECULE COMPONENT
  * @name Footer
- * @description Renders the Footer with an Items Array as an unordered list
+ * @description Renders the Footer with a Links Array as an unordered list
  *
  * @param {FooterProps} props
  *  The Properties of the Footer
  *
- * @param {Array<ButtonProps>} props.array
- *  The Items Array of the Footer
+ * @param {Array<ButtonProps>} props.links
+ *  The Links of the Footer
  *
  * @returns {React.ReactElement<HTMLElement>}
  *  The rendered Footer
  */
 export const Footer =
-  ({ array }: FooterProps):
+  ({ links }: FooterProps):
   React.ReactElement<HTMLElement> => {
 
   return (
     <footer className="footer">
       <List
-        array={array.map((item) =>
+        array={links.map((item) =>
           <Button
             link={item.link}
             ico={item.ico}
