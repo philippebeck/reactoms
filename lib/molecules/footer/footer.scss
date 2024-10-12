@@ -4,13 +4,12 @@
 
 //! ********** FOOTER **********
 
-.footer {
+[id=contact] {
   display: flex;
   place-content: center;
-  position: fixed;
-  z-index: 1000;
-  bottom: 5px;
+  padding: 20px 0;
   width: 100%;
+  background-color: $gray;
 
   li {
     display: flex;
