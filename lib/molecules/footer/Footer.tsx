@@ -22,7 +22,7 @@ export const Footer =
   React.ReactElement<HTMLElement> => {
 
   return (
-    <footer className="footer">
+    <footer id="contact">
       <List
         array={links.map((item) =>
           <Button
