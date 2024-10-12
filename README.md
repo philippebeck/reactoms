@@ -56,7 +56,7 @@ Molecules :
 - **Button** => *Link -> Icon + (b)*  
 - **Footer** => *footer -> List -> Button*  
 - **Gallery** => *List -> Link -> (Card -> Image + Title + List -> Icon)*
-- **Navbar** => *nav -> List -> Button*  
+- **Navbar** => *nav -> Button + (List -> Button) + Button*  
 - **Slider** => *figure -> (nav -> Icon) + progress*  
 - **Title** => *hgroup -> (p -> Icon) + h1 | h2 | h3 | h4 + (p)*  
 
