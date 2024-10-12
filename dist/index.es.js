@@ -691,7 +691,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
       ] })
     }
   );
-}, jr = ({ links: l }) => /* @__PURE__ */ n.jsx("footer", { className: "footer", children: /* @__PURE__ */ n.jsx(
+}, jr = ({ links: l }) => /* @__PURE__ */ n.jsx("footer", { id: "contact", children: /* @__PURE__ */ n.jsx(
   J,
   {
     array: l.map(
