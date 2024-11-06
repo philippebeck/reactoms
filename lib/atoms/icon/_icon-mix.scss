@@ -1,9 +1,0 @@
-//! ********** ICON MIXIN **********
-
-@mixin icon($name, $color) {
-  [open] .fa-#{$name},
-  *:hover > * > .fa-#{$name},
-  *:focus > * > * > .fa-#{$name} {
-    color: $color;
-  }
-}
