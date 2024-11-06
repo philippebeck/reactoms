@@ -1,5 +1,4 @@
 import { IconProps } from './IconProps'
-import './icon.scss'
 
 /**
  * ! ICON ATOM COMPONENT
