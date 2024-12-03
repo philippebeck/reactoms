@@ -1,8 +1,43 @@
 @import '../../assets/style';
-@import './navbar-var';
-@import './navbar-mix';
 
-//! ********** NAVBAR **********
+//! ********** VARIABLES **********
+
+$padding-x: 5px;
+$padding-y: 2px;
+$font: 0.7rem;
+
+$padding-sizes: (
+  "xs": 1px,
+  "sm": 3px,
+  "md": 4px,
+  "lg": 5px,
+  "xl": 6px
+) !default;
+
+$padding-ratios: (
+  "xs": 2,
+  "sm": 0,
+  "md": 0,
+  "lg": 0,
+  "xl": 0
+) !default;
+
+$font-sizes: (
+  "xs": 0.1rem,
+  "sm": 0.3rem,
+  "md": 0.4rem,
+  "lg": 0.5rem,
+  "xl": 0.6rem
+) !default;
+
+//! ********** MIXIN **********
+
+@mixin navbar($padding-size, $padding-ratio, $font-size) {
+  padding: calc($padding-y + $padding-size) calc($padding-x * $padding-ratio);
+  font-size: calc($font + $font-size);
+}
+
+//! ********** MAIN **********
 
 .navbar {
   display: flex;
