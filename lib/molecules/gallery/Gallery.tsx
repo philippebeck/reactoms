@@ -1,5 +1,4 @@
-import { GalleryItemProps } from './GalleryItemProps'
-import { GalleryProps } from './GalleryProps'
+import { GalleryItemProps, GalleryProps } from './GalleryProps'
 import { Card } from '../../atoms/card/Card'
 import { Icon } from '../../atoms/icon/Icon'
 import { Image } from '../../atoms/image/Image'
