@@ -1,24 +1,5 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
-
-$buttons: (
-  "linkedin-in":  #0077B5,
-  "medium":       #00AB6C,
-  "npm":          #EA2039
-) !default;
-
-//! ********** MIXIN **********
-
-@mixin button($icon, $color) {
-  .fa-#{$icon}:hover,
-  .fa-#{$icon}:focus {
-    color: $color;
-  }
-}
-
-//! ********** MAIN **********
-
 .button {
   width: fit-content;
 
@@ -31,10 +12,6 @@ $buttons: (
 
   b {
     display: none;
-  }
-
-  @each $social-key, $social-value in $buttons {
-    @include button($social-key, $social-value);
   }
 
   @media (min-width: $sm) {
