@@ -1,9 +1,9 @@
 {
   "name": "reactoms",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Card, Collapse, Icon, Image, Link, List for Atoms & Button, Footer, Gallery, Navbar, Slider, Title for Molecules",
   "type": "module",
-  "keywords":[
+  "keywords": [
     "react",
     "components",
     "library",
@@ -44,7 +44,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.3.0",
+    "@fortawesome/fontawesome-free": "^6.7.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -65,7 +65,7 @@
   },
   "repository": "github:philippebeck/reactoms",
   "license": "Apache-2.0",
-  "author":{
+  "author": {
     "name": "Philippe Beck",
     "email": "philippebeck.dev@gmail.com",
     "url": "https://philippebeck.github.io"
