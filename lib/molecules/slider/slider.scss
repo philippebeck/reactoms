@@ -3,35 +3,27 @@
 //! ********** VARIABLES **********
 
 $top-sizes: (
-  "xs": 43px,
   "sm": 56px,
-  "md": 63px,
-  "lg": 70px,
-  "xl": 77px
+  "md": 70px,
+  "lg": 84px
 ) !default;
 
 $left-sizes: (
-  "xs": 11px,
   "sm": 19px,
-  "md": 22px,
-  "lg": 26px,
-  "xl": 30px
+  "md": 26px,
+  "lg": 34px
 ) !default;
 
 $bottom-ratios: (
-  "xs": 2px,
   "sm": 25px,
-  "md": 37px,
-  "lg": 48px,
-  "xl": 61px
+  "md": 48px,
+  "lg": 74px
 ) !default;
 
 $font-ratios: (
-  "xs": 1.5,
   "sm": 2.5,
-  "md": 3,
-  "lg": 3.5,
-  "xl": 4
+  "md": 3.5,
+  "lg": 4.5
 ) !default;
 
 //! ********** MIXIN **********

@@ -6,19 +6,15 @@ $radius: 5px;
 $width: 150px;
 
 $radius-ratios: (
-  "xs": 2,
   "sm": 4,
-  "md": 5,
-  "lg": 6,
-  "xl": 7
+  "md": 6,
+  "lg": 8
   ) !default;
 
 $width-sizes: (
-  "xs": 10px,
   "sm": 40px,
-  "md": 60px,
-  "lg": 80px,
-  "xl": 100px
+  "md": 80px,
+  "lg": 120px
   ) !default;
 
 //! ********** MIXIN **********

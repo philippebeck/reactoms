@@ -1,17 +1,13 @@
 //! ********** VARIABLES **********
 
-$xs: 360px;  // mobile portrait
-$sm: 768px;  // mobile landscape & tablet portrait
-$md: 1024px; // tablet landscape
-$lg: 1366px; // small laptop
-$xl: 1920px; // large laptop & desktop
+$sm: 768px;
+$md: 1366px;
+$lg: 1920px;
 
 $breakpoints: (
-  "xs": $xs,
   "sm": $sm,
   "md": $md,
-  "lg": $lg,
-  "xl": $xl
+  "lg": $lg
 ) !default;
 
 $font-families: Geologica, Trocchi, UbuntuMono;
