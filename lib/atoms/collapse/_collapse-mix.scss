@@ -1,6 +1,0 @@
-//! ********** COLLAPSE MIXIN **********
-
-@mixin collapse($ratio, $size) {
-  border-radius: calc($radius * $ratio);
-  width: calc($width + $size);
-}
