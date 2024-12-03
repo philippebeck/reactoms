@@ -1,19 +1,79 @@
-@import './style-var';
-@import './style-mix';
+//! ********** VARIABLES **********
 
-//! ********** FONTS **********
+$xs: 360px;  // mobile portrait
+$sm: 768px;  // mobile landscape & tablet portrait
+$md: 1024px; // tablet landscape
+$lg: 1366px; // small laptop
+$xl: 1920px; // large laptop & desktop
+
+$breakpoints: (
+  "xs": $xs,
+  "sm": $sm,
+  "md": $md,
+  "lg": $lg,
+  "xl": $xl
+) !default;
+
+$font-families: Geologica, Trocchi, UbuntuMono;
+
+$sans-serif: Geologica, Helvetica, sans-serif;
+$serif: Trocchi, Times, serif;
+$monospace: UbuntuMono, Courier, monospace;
+
+$primary:   hsl(270, 100%, 80%);
+$secondary: hsl(120, 100%, 80%);
+$white:     hsl(  0,   0%, 99%);
+$silver:    hsl(  0,   0%, 80%);
+$gray:      hsl(  0,   0%, 20%);
+$black:     hsl(  0,   0%,  1%);
+
+$transforms: (
+  "grow-min": scale(0.7, 0.7),
+  "grow-max": scale(0, 0),
+
+  "slide-top":    translateY(100%),
+  "slide-right":  translateX(-100%),
+
+  "turn-x":   rotateX(360deg),
+  "turn-y":   rotateY(360deg),
+  "turn-z":   rotateZ(360deg),
+  "turn-xy":  rotate3d(1, 1, 0, 360deg),
+  "turn-xz":  rotate3d(1, 0, 1, 360deg),
+  "turn-yz":  rotate3d(0, 1, 1, 360deg),
+  "turn-3d":  rotate3d(1, 1, 1, 360deg)
+) !default;
+
+//! ********** MIXINS **********
+
+@mixin font-face($font-family) {
+  @font-face {
+    font-family: $font-family;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src:
+      local("#{$font-family}-Regular"),
+      url("/fonts/#{$font-family}-Regular.woff2") format("woff2");
+  }
+}
+
+@mixin keyframes($key, $value) {
+  @keyframes #{$key} {
+    from {
+      transform: #{$value};
+    }
+  }
+}
+
+//! ********** MAIN **********
 
 @each $font-family in $font-families {
   @include font-face($font-family);
 }
 
-//! ********** KEYFRAMES **********
-
 @each $key, $value in $transforms {
   @include keyframes($key, $value);
 }
-
-//! ********** APP **********
 
 body {
   margin: 0;
