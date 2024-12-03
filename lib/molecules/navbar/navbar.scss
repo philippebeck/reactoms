@@ -7,27 +7,21 @@ $padding-y: 2px;
 $font: 0.7rem;
 
 $padding-sizes: (
-  "xs": 1px,
   "sm": 3px,
-  "md": 4px,
-  "lg": 5px,
-  "xl": 6px
+  "md": 5px,
+  "lg": 7px
 ) !default;
 
 $padding-ratios: (
-  "xs": 2,
   "sm": 0,
   "md": 0,
-  "lg": 0,
-  "xl": 0
+  "lg": 0
 ) !default;
 
 $font-sizes: (
-  "xs": 0.1rem,
   "sm": 0.3rem,
-  "md": 0.4rem,
-  "lg": 0.5rem,
-  "xl": 0.6rem
+  "md": 0.5rem,
+  "lg": 0.7rem
 ) !default;
 
 //! ********** MIXIN **********
