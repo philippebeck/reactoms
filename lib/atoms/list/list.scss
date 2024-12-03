@@ -1,8 +1,24 @@
 @import '../../assets/style';
-@import './list-var';
-@import './list-mix';
 
-//! ********** LIST **********
+//! ********** VARIABLES **********
+
+$gap-size: 5px;
+
+$gap-ratios: (
+  "xs": 1.5,
+  "sm": 2.5,
+  "md": 3,
+  "lg": 3.5,
+  "xl": 4
+  ) !default;
+
+  //! ********** MIXIN **********
+
+@mixin list($ratio) {
+  gap: calc($gap-size * $ratio);
+}
+
+//! ********** MAIN **********
 
 .list {
   display: flex;

@@ -1,5 +1,0 @@
-//! ********** LIST MIXIN **********
-
-@mixin list($ratio) {
-  gap: calc($gap-size * $ratio);
-}
