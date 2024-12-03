@@ -1,6 +1,0 @@
-//! ********** NAVBAR MIXIN **********
-
-@mixin navbar($padding-size, $padding-ratio, $font-size) {
-  padding: calc($padding-y + $padding-size) calc($padding-x * $padding-ratio);
-  font-size: calc($font + $font-size);
-}

@@ -1,11 +1,36 @@
 @import '../../assets/style';
-@import './collapse-var';
-@import './collapse-mix';
 
-//! ********** COLLAPSE **********
+//! ********** VARIABLES **********
+
+$radius: 5px;
+$width: 150px;
+
+$radius-ratios: (
+  "xs": 2,
+  "sm": 4,
+  "md": 5,
+  "lg": 6,
+  "xl": 7
+  ) !default;
+
+$width-sizes: (
+  "xs": 10px,
+  "sm": 40px,
+  "md": 60px,
+  "lg": 80px,
+  "xl": 100px
+  ) !default;
+
+//! ********** MIXIN **********
+
+@mixin collapse($ratio, $size) {
+  border-radius: calc($radius * $ratio);
+  width: calc($width + $size);
+}
+
+//! ********** MAIN **********
 
 .collapse {
-
   & > figure {
     margin: 20px;
   }

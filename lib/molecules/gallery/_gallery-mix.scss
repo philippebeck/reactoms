@@ -1,8 +1,0 @@
-//! ********** GALLERY MIXIN **********
-
-@mixin gallery($size, $ratio) {
-  .collapse figure > .list > li {
-    width: calc((100% - ($ratio - 1) * $size) / $ratio
-    );
-  }
-}

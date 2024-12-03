@@ -1,8 +1,35 @@
 @import '../../assets/style';
-@import './footer-var';
-@import './footer-mix';
 
-//! ********** FOOTER **********
+//! ********** VARIABLES **********
+
+$size: 30px;
+$font: 1.2rem;
+
+$block-sizes: (
+  "xs": 5px,
+  "sm": 15px,
+  "md": 20px,
+  "lg": 25px,
+  "xl": 30px
+) !default;
+
+$font-ratios: (
+  "xs": 1.2,
+  "sm": 1.6,
+  "md": 1.8,
+  "lg": 2,
+  "xl": 2.2
+) !default;
+
+//! ********** MIXIN **********
+
+@mixin footer($block-size, $font-ratio) {
+  width: calc($size + $block-size);
+  height: calc($size + $block-size);
+  font-size: calc($font * $font-ratio);
+}
+
+//! ********** MAIN **********
 
 [id=contact] {
   display: flex;
