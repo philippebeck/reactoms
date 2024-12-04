@@ -47,7 +47,7 @@ $title-ratios: (
     font-size: $font-size;
 
     & + p {
-      width: calc($width * $screen-ratio * $screen-ratio);
+      max-width: calc($width * $screen-ratio * $screen-ratio);
       font-size: calc($font-size * $subtitle);
     }
   }
