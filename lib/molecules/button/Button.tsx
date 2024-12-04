@@ -19,14 +19,15 @@ import './button.scss'
  * @param {string} props.ico
  *  The Icon of the Button
  *
- * @param {string} props.txt
+ * @param {string} [props.txt=""]
  *  The Text of the Button
+ *  @default ""
  *
  * @returns {React.ReactElement<HTMLLinkElement>}
  *  The rendered Button
  */
 export const Button =
-  ({ link, ico, txt }:
+  ({ link, ico, txt = "" }:
   ButtonProps): React.ReactElement<HTMLLinkElement> => {
 
   const { url, label }: LinkProps = link

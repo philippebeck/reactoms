@@ -12,11 +12,12 @@ import { LinkProps } from '../../atoms/link/LinkProps'
  * @property {IconProps} ico
  *  The Icon of the Button
  *
- * @property {string} txt
+ * @property {string} [txt=""]
  *  The Text of the Button
+ *  @default ""
  */
 export interface ButtonProps {
   link: LinkProps
   ico: IconProps
-  txt: string
+  txt?: string
 }
