@@ -14,12 +14,12 @@ function Er() {
   if (Pe) return W;
   Pe = 1;
   var l = K, o = Symbol.for("react.element"), i = Symbol.for("react.fragment"), v = Object.prototype.hasOwnProperty, d = l.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner, g = { key: !0, ref: !0, __self: !0, __source: !0 };
-  function j(x, m, k) {
+  function j(R, m, k) {
     var b, h = {}, O = null, Y = null;
     k !== void 0 && (O = "" + k), m.key !== void 0 && (O = "" + m.key), m.ref !== void 0 && (Y = m.ref);
     for (b in m) v.call(m, b) && !g.hasOwnProperty(b) && (h[b] = m[b]);
-    if (x && x.defaultProps) for (b in m = x.defaultProps, m) h[b] === void 0 && (h[b] = m[b]);
-    return { $$typeof: o, type: x, key: O, ref: Y, props: h, _owner: d.current };
+    if (R && R.defaultProps) for (b in m = R.defaultProps, m) h[b] === void 0 && (h[b] = m[b]);
+    return { $$typeof: o, type: R, key: O, ref: Y, props: h, _owner: d.current };
   }
   return W.Fragment = i, W.jsx = j, W.jsxs = j, W;
 }
@@ -34,9 +34,9 @@ var L = {};
  * LICENSE file in the root directory of this source tree.
  */
 var Ae;
-function xr() {
+function Rr() {
   return Ae || (Ae = 1, process.env.NODE_ENV !== "production" && function() {
-    var l = K, o = Symbol.for("react.element"), i = Symbol.for("react.portal"), v = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), g = Symbol.for("react.profiler"), j = Symbol.for("react.provider"), x = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), b = Symbol.for("react.suspense_list"), h = Symbol.for("react.memo"), O = Symbol.for("react.lazy"), Y = Symbol.for("react.offscreen"), ae = Symbol.iterator, Ne = "@@iterator";
+    var l = K, o = Symbol.for("react.element"), i = Symbol.for("react.portal"), v = Symbol.for("react.fragment"), d = Symbol.for("react.strict_mode"), g = Symbol.for("react.profiler"), j = Symbol.for("react.provider"), R = Symbol.for("react.context"), m = Symbol.for("react.forward_ref"), k = Symbol.for("react.suspense"), b = Symbol.for("react.suspense_list"), h = Symbol.for("react.memo"), O = Symbol.for("react.lazy"), Y = Symbol.for("react.offscreen"), ae = Symbol.iterator, Ne = "@@iterator";
     function We(e) {
       if (e === null || typeof e != "object")
         return null;
@@ -64,7 +64,7 @@ function xr() {
     var Ye = !1, Ve = !1, Me = !1, Ue = !1, Be = !1, ie;
     ie = Symbol.for("react.module.reference");
     function He(e) {
-      return !!(typeof e == "string" || typeof e == "function" || e === v || e === g || Be || e === d || e === k || e === b || Ue || e === Y || Ye || Ve || Me || typeof e == "object" && e !== null && (e.$$typeof === O || e.$$typeof === h || e.$$typeof === j || e.$$typeof === x || e.$$typeof === m || // This needs to include all possible module reference object
+      return !!(typeof e == "string" || typeof e == "function" || e === v || e === g || Be || e === d || e === k || e === b || Ue || e === Y || Ye || Ve || Me || typeof e == "object" && e !== null && (e.$$typeof === O || e.$$typeof === h || e.$$typeof === j || e.$$typeof === R || e.$$typeof === m || // This needs to include all possible module reference object
       // types supported by any Flight configuration anywhere since
       // we don't know which Flight build this will end up being used
       // with.
@@ -103,7 +103,7 @@ function xr() {
       }
       if (typeof e == "object")
         switch (e.$$typeof) {
-          case x:
+          case R:
             var r = e;
             return oe(r) + ".Consumer";
           case j:
@@ -232,37 +232,37 @@ function xr() {
           }), typeof Reflect == "object" && Reflect.construct) {
             try {
               Reflect.construct(u, []);
-            } catch (_) {
-              a = _;
+            } catch (x) {
+              a = x;
             }
             Reflect.construct(e, [], u);
           } else {
             try {
               u.call();
-            } catch (_) {
-              a = _;
+            } catch (x) {
+              a = x;
             }
             e.call(u.prototype);
           }
         } else {
           try {
             throw Error();
-          } catch (_) {
-            a = _;
+          } catch (x) {
+            a = x;
           }
           e();
         }
-      } catch (_) {
-        if (_ && a && typeof _.stack == "string") {
-          for (var s = _.stack.split(`
-`), R = a.stack.split(`
-`), p = s.length - 1, y = R.length - 1; p >= 1 && y >= 0 && s[p] !== R[y]; )
+      } catch (x) {
+        if (x && a && typeof x.stack == "string") {
+          for (var s = x.stack.split(`
+`), _ = a.stack.split(`
+`), p = s.length - 1, y = _.length - 1; p >= 1 && y >= 0 && s[p] !== _[y]; )
             y--;
           for (; p >= 1 && y >= 0; p--, y--)
-            if (s[p] !== R[y]) {
+            if (s[p] !== _[y]) {
               if (p !== 1 || y !== 1)
                 do
-                  if (p--, y--, y < 0 || s[p] !== R[y]) {
+                  if (p--, y--, y < 0 || s[p] !== _[y]) {
                     var T = `
 ` + s[p].replace(" at new ", " at ");
                     return e.displayName && T.includes("<anonymous>") && (T = T.replace("<anonymous>", e.displayName)), typeof e == "function" && M.set(e, T), T;
@@ -329,8 +329,8 @@ function xr() {
             var s = void 0;
             try {
               if (typeof e[u] != "function") {
-                var R = Error((a || "React class") + ": " + t + " type `" + u + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[u] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
-                throw R.name = "Invariant Violation", R;
+                var _ = Error((a || "React class") + ": " + t + " type `" + u + "` is invalid; it must be a function, usually from the `prop-types` package, but received `" + typeof e[u] + "`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.");
+                throw _.name = "Invariant Violation", _;
               }
               s = e[u](r, u, a, t, null, "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED");
             } catch (p) {
@@ -369,7 +369,7 @@ function xr() {
       ref: !0,
       __self: !0,
       __source: !0
-    }, Ee, xe, Z;
+    }, Ee, Re, Z;
     Z = {};
     function nr(e) {
       if ($.call(e, "ref")) {
@@ -407,7 +407,7 @@ function xr() {
     function sr(e, r) {
       {
         var t = function() {
-          xe || (xe = !0, E("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
+          Re || (Re = !0, E("%s: `ref` is not a prop. Trying to access it will result in `undefined` being returned. If you need to access the same value within the child component, you should pass it as a different prop. (https://reactjs.org/link/special-props)", r));
         };
         t.isReactWarning = !0, Object.defineProperty(e, "ref", {
           get: t,
@@ -446,8 +446,8 @@ function xr() {
     };
     function lr(e, r, t, a, c) {
       {
-        var f, u = {}, s = null, R = null;
-        t !== void 0 && (be(t), s = "" + t), ar(r) && (be(r.key), s = "" + r.key), nr(r) && (R = r.ref, ir(r, c));
+        var f, u = {}, s = null, _ = null;
+        t !== void 0 && (be(t), s = "" + t), ar(r) && (be(r.key), s = "" + r.key), nr(r) && (_ = r.ref, ir(r, c));
         for (f in r)
           $.call(r, f) && !tr.hasOwnProperty(f) && (u[f] = r[f]);
         if (e && e.defaultProps) {
@@ -455,27 +455,27 @@ function xr() {
           for (f in p)
             u[f] === void 0 && (u[f] = p[f]);
         }
-        if (s || R) {
+        if (s || _) {
           var y = typeof e == "function" ? e.displayName || e.name || "Unknown" : e;
-          s && or(u, y), R && sr(u, y);
+          s && or(u, y), _ && sr(u, y);
         }
-        return ur(e, s, R, c, a, N.current, u);
+        return ur(e, s, _, c, a, N.current, u);
       }
     }
-    var Q = P.ReactCurrentOwner, Re = P.ReactDebugCurrentFrame;
+    var Q = P.ReactCurrentOwner, _e = P.ReactDebugCurrentFrame;
     function A(e) {
       if (e) {
         var r = e._owner, t = U(e.type, e._source, r ? r.type : null);
-        Re.setExtraStackFrame(t);
+        _e.setExtraStackFrame(t);
       } else
-        Re.setExtraStackFrame(null);
+        _e.setExtraStackFrame(null);
     }
     var ee;
     ee = !1;
     function re(e) {
       return typeof e == "object" && e !== null && e.$$typeof === o;
     }
-    function _e() {
+    function xe() {
       {
         if (Q.current) {
           var e = w(Q.current.type);
@@ -493,7 +493,7 @@ Check the render method of \`` + e + "`.";
     var je = {};
     function fr(e) {
       {
-        var r = _e();
+        var r = xe();
         if (!r) {
           var t = typeof e == "string" ? e : e.displayName || e.name;
           t && (r = `
@@ -579,8 +579,8 @@ Check the top-level render call using <` + t + ">.");
         if (!u) {
           var s = "";
           (e === void 0 || typeof e == "object" && e !== null && Object.keys(e).length === 0) && (s += " You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.");
-          var R = cr();
-          R ? s += R : s += _e();
+          var _ = cr();
+          _ ? s += _ : s += xe();
           var p;
           e === null ? p = "null" : X(e) ? p = "array" : e !== void 0 && e.$$typeof === o ? (p = "<" + (w(e.type) || "Unknown") + " />", s = " Did you accidentally export a JSX literal instead of a component?") : p = typeof e, E("React.jsx: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", p, s);
         }
@@ -601,11 +601,11 @@ Check the top-level render call using <` + t + ">.");
               we(T, e);
         }
         if ($.call(r, "key")) {
-          var C = w(e), _ = Object.keys(r).filter(function(br) {
+          var C = w(e), x = Object.keys(r).filter(function(br) {
             return br !== "key";
-          }), te = _.length > 0 ? "{key: someKey, " + _.join(": ..., ") + ": ...}" : "{key: someKey}";
+          }), te = x.length > 0 ? "{key: someKey, " + x.join(": ..., ") + ": ...}" : "{key: someKey}";
           if (!ke[C + te]) {
-            var mr = _.length > 0 ? "{" + _.join(": ..., ") + ": ...}" : "{}";
+            var mr = x.length > 0 ? "{" + x.join(": ..., ") + ": ...}" : "{}";
             E(`A props object containing a "key" prop is being spread into JSX:
   let props = %s;
   <%s {...props} />
@@ -627,12 +627,12 @@ React keys must be passed directly to JSX without using spread:
     L.Fragment = v, L.jsx = hr, L.jsxs = yr;
   }()), L;
 }
-process.env.NODE_ENV === "production" ? ne.exports = Er() : ne.exports = xr();
+process.env.NODE_ENV === "production" ? ne.exports = Er() : ne.exports = Rr();
 var n = ne.exports;
 const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure", { className: "card", children: [
   l,
   o && /* @__PURE__ */ n.jsx("figcaption", { children: o })
-] }), _r = ({ title: l, content: o }) => /* @__PURE__ */ n.jsxs("details", { className: "collapse", children: [
+] }), xr = ({ title: l, content: o }) => /* @__PURE__ */ n.jsxs("details", { className: "collapse", children: [
   /* @__PURE__ */ n.jsx("summary", { children: l }),
   /* @__PURE__ */ n.jsx("figure", { children: o })
 ] }), D = ({ name: l, cat: o = "brands", option: i = "2x", isHidden: v = !0, event: d = void 0 }) => /* @__PURE__ */ n.jsx(
@@ -668,8 +668,8 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
   );
 }, J = ({ array: l }) => /* @__PURE__ */ n.jsx("ul", { className: "list", children: l.map(
   (o, i) => /* @__PURE__ */ n.jsx("li", { children: /* @__PURE__ */ n.jsx(n.Fragment, { children: o }) }, i)
-) }), H = ({ link: l, ico: o, txt: i }) => {
-  const { url: v, label: d } = l, { name: g, cat: j, option: x } = o;
+) }), H = ({ link: l, ico: o, txt: i = "" }) => {
+  const { url: v, label: d } = l, { name: g, cat: j, option: R } = o;
   return /* @__PURE__ */ n.jsx(
     $e,
     {
@@ -682,7 +682,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
           {
             name: g,
             cat: j,
-            option: x,
+            option: R,
             isHidden: !1,
             event: void 0
           }
@@ -699,8 +699,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
         H,
         {
           link: o.link,
-          ico: o.ico,
-          txt: ""
+          ico: o.ico
         }
       )
     )
@@ -737,7 +736,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
             J,
             {
               array: i.caption.technos.map(
-                (x) => /* @__PURE__ */ n.jsx(D, { name: x, option: "lg", isHidden: !1 })
+                (R) => /* @__PURE__ */ n.jsx(D, { name: R, option: "lg", isHidden: !1 })
               )
             }
           )
@@ -752,8 +751,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
     H,
     {
       link: l.link,
-      ico: l.ico,
-      txt: ""
+      ico: l.ico
     }
   ),
   /* @__PURE__ */ n.jsx(
@@ -775,19 +773,18 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
     H,
     {
       link: i.link,
-      ico: i.ico,
-      txt: ""
+      ico: i.ico
     }
   )
 ] }), kr = ({ array: l, timer: o = 5e3 }) => {
   const i = l.length, [v, d] = Se(0), g = () => d((h) => (h + 1) % i), j = () => d((h) => (h - 1 + i) % i);
   //! ********** AUTOPLAY **********
-  let [x, m] = Se(o !== 0);
+  let [R, m] = Se(o !== 0);
   const k = () => m((h) => !h);
   Ce(() => {
     let h;
-    return x && (h = setInterval(() => g(), o)), () => clearInterval(h);
-  }, [x, i]);
+    return R && (h = setInterval(() => g(), o)), () => clearInterval(h);
+  }, [R, i]);
   //! ********** KEYBOARD EVENTS **********
   const b = (h) => {
     switch (h.key) {
@@ -839,7 +836,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
           /* @__PURE__ */ n.jsx(
             D,
             {
-              name: x ? "pause" : "play",
+              name: R ? "pause" : "play",
               cat: "solid",
               isHidden: !1,
               event: k
@@ -854,7 +851,7 @@ const Fe = ({ content: l, caption: o = "" }) => /* @__PURE__ */ n.jsxs("figure",
 export {
   H as Button,
   Fe as Card,
-  _r as Collapse,
+  xr as Collapse,
   jr as Footer,
   Tr as Gallery,
   D as Icon,
