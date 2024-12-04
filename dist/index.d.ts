@@ -14,8 +14,9 @@ import { default as default_2 } from 'react';
  * @param {string} props.ico
  *  The Icon of the Button
  *
- * @param {string} props.txt
+ * @param {string} [props.txt=""]
  *  The Text of the Button
+ *  @default ""
  *
  * @returns {React.ReactElement<HTMLLinkElement>}
  *  The rendered Button
@@ -33,13 +34,14 @@ export declare const Button: ({ link, ico, txt }: ButtonProps) => React.ReactEle
  * @property {IconProps} ico
  *  The Icon of the Button
  *
- * @property {string} txt
+ * @property {string} [txt=""]
  *  The Text of the Button
+ *  @default ""
  */
 declare interface ButtonProps {
     link: LinkProps;
     ico: IconProps;
-    txt: string;
+    txt?: string;
 }
 
 /**

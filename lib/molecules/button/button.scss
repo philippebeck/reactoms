@@ -1,8 +1,6 @@
 @import '../../assets/style';
 
 .button {
-  width: fit-content;
-
   &:hover,
   &:focus {
     color: $gray;

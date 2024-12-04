@@ -1,6 +1,6 @@
 {
   "name": "reactoms",
-  "version": "0.4.9",
+  "version": "0.4.10",
   "description": "A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Card, Collapse, Icon, Image, Link, List for Atoms & Button, Footer, Gallery, Navbar, Slider, Title for Molecules",
   "type": "module",
   "keywords": [

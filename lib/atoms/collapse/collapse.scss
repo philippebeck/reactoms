@@ -3,7 +3,7 @@
 //! ********** VARIABLES **********
 
 $radius: 5px;
-$width: 150px;
+$width: 50vw;
 
 $radius-ratios: (
   "sm": 4,
@@ -12,16 +12,16 @@ $radius-ratios: (
   ) !default;
 
 $width-sizes: (
-  "sm": 40px,
-  "md": 80px,
-  "lg": 120px
+  "sm": 40vw,
+  "md": 25vw,
+  "lg": 15vw
   ) !default;
 
 //! ********** MIXIN **********
 
 @mixin collapse($ratio, $size) {
   border-radius: calc($radius * $ratio);
-  width: calc($width + $size);
+  width: $size;
 }
 
 //! ********** MAIN **********

@@ -2,8 +2,7 @@
 
 //! ********** VARIABLES **********
 
-$padding-x: 5px;
-$padding-y: 2px;
+$padding: 5px;
 $font: 0.7rem;
 
 $padding-sizes: (
@@ -26,8 +25,8 @@ $font-sizes: (
 
 //! ********** MIXIN **********
 
-@mixin navbar($padding-size, $padding-ratio, $font-size) {
-  padding: calc($padding-y + $padding-size) calc($padding-x * $padding-ratio);
+@mixin navbar($padding-size, $font-size) {
+  padding: calc($padding + $padding-size);
   font-size: calc($font + $font-size);
 }
 
@@ -41,7 +40,7 @@ $font-sizes: (
   z-index: 1000;
   top: 0;
   box-sizing: border-box;
-  padding: $padding-y $padding-x;
+  padding: $padding;
   width: 100%;
   font-size: $font;
   background-color: $primary;
@@ -57,7 +56,6 @@ $font-sizes: (
 
       @include navbar(
         map-get($padding-sizes, $breakpoint-key),
-        map-get($padding-ratios, $breakpoint-key),
         map-get($font-sizes, $breakpoint-key)
       );
     }
@@ -71,7 +69,7 @@ $font-sizes: (
     }
   }
 
-  @media (min-width: $lg) {
+  @media (min-width: $md) {
     place-content: space-evenly;
   }
 }

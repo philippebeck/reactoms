@@ -2,12 +2,12 @@
 
 //! ********** VARIABLES **********
 
-$gap-size: 5px;
+$gap-size: 10px;
 
 $gap-ratios: (
-  "sm": 2.5,
-  "md": 3.5,
-  "lg": 4.5
+  "sm": 1.5,
+  "md": 2,
+  "lg": 2.5
   ) !default;
 
   //! ********** MIXIN **********
@@ -24,9 +24,10 @@ $gap-ratios: (
   gap: $gap-size;
   place-content: center;
   place-items: center;
-  margin: 0;
+  margin: auto;
   padding: 0;
   list-style: none;
+  text-align: center;
 
   @each $breakpoint-key, $breakpoint-value in $breakpoints {
     @media (min-width: $breakpoint-value) {

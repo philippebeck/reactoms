@@ -28,7 +28,6 @@ export const Footer =
           <Button
             link={item.link}
             ico={item.ico}
-            txt=""
           />
         )}
       />
