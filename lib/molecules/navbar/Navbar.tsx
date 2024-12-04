@@ -32,7 +32,6 @@ export const Navbar =
       <Button
         link={brand.link}
         ico={brand.ico}
-        txt=""
       />
 
       <List
@@ -48,7 +47,6 @@ export const Navbar =
       <Button
         link={contact.link}
         ico={contact.ico}
-        txt=""
       />
     </nav>
   )
