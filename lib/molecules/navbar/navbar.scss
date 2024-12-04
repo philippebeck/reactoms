@@ -49,6 +49,7 @@ $font-sizes: (
 
   ul {
     flex-flow: nowrap;
+    gap: 5vw;
   }
 
   @each $breakpoint-key, $breakpoint-value in $breakpoints {
@@ -64,6 +65,10 @@ $font-sizes: (
 
   @media (min-width: $sm) {
     place-content: space-around;
+
+    & ul {
+      gap: 2vw;
+    }
   }
 
   @media (min-width: $lg) {
