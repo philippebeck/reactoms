@@ -3,9 +3,9 @@
 //! ********** VARIABLES **********
 
 $width-sizes: (
-  "sm": 20px,
-  "md": 30px,
-  "lg": 40px
+  "sm": 15px,
+  "md": 40px,
+  "lg": 75px
 ) !default;
 
 $width-ratios: (
@@ -17,9 +17,13 @@ $width-ratios: (
 //! ********** MIXIN **********
 
 @mixin gallery($size, $ratio) {
-  .collapse figure > .list > li {
-    width: calc((100% - ($ratio - 1) * $size) / $ratio
-    );
+  .collapse {
+    max-width: calc(500px * $ratio);
+
+    figure > .list > li {
+      width: calc((100% - $size) / $ratio
+      );
+    }
   }
 }
 
