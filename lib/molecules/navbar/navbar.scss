@@ -2,9 +2,6 @@
 
 //! ********** VARIABLES **********
 
-$padding: 5px;
-$font: 0.7rem;
-
 $padding-sizes: (
   "md": 10px,
   "lg": 15px
@@ -18,23 +15,23 @@ $font-sizes: (
 //! ********** MIXIN **********
 
 @mixin navbar($padding-size, $font-size) {
-  padding: calc($padding + $padding-size);
-  font-size: calc($font + $font-size);
+  padding: $padding-size 0;
+  font-size: $font-size;
 }
 
 //! ********** MAIN **********
 
 .navbar {
   display: flex;
-  place-content: space-between;
+  place-content: space-around;
   place-items: center;
   position: fixed;
   z-index: 1000;
   top: 0;
   box-sizing: border-box;
-  padding: $padding;
+  padding: 5px 0;
   width: 100%;
-  font-size: $font;
+  font-size: 0.8rem;
   background-color: $primary;
   color: $black;
 
@@ -53,15 +50,13 @@ $font-sizes: (
     }
   }
 
-  @media (min-width: $sm) {
-    place-content: space-around;
-
+  @media (min-width: $md) {
     & ul {
       gap: 2vw;
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     place-content: space-evenly;
   }
 }

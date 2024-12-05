@@ -2,9 +2,9 @@
 
 //! ********** VARIABLES **********
 
-$radius: 5px;
-$width: 50vw;
-
+$radius-sizes: (
+  "md": 20px,
+  "lg": 50px
   ) !default;
 
 $width-sizes: (
@@ -14,9 +14,9 @@ $width-sizes: (
 
 //! ********** MIXIN **********
 
-@mixin collapse($ratio, $size) {
-  border-radius: calc($radius * $ratio);
-  width: $size;
+@mixin collapse($radius, $width) {
+  border-radius: $radius;
+  width: $width;
 }
 
 //! ********** MAIN **********
@@ -35,9 +35,9 @@ $width-sizes: (
 
   summary {
     margin: auto;
-    border-radius: $radius;
+    border-radius: 10px;
     padding: 10px;
-    width: $width;
+    width: 60vw;
     list-style: none;
     background-color: $secondary;
     color: $black;
@@ -52,7 +52,7 @@ $width-sizes: (
       @media (min-width: $breakpoint-value) {
 
         @include collapse(
-          map-get($radius-ratios, $breakpoint-key),
+          map-get($radius-sizes, $breakpoint-key),
           map-get($width-sizes, $breakpoint-key)
         );
       }

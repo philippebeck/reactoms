@@ -9,8 +9,8 @@ $gap-sizes: (
 
   //! ********** MIXIN **********
 
-@mixin list($ratio) {
-  gap: calc($gap-size * $ratio);
+@mixin list($gap) {
+  gap: $gap;
 }
 
 //! ********** MAIN **********
@@ -18,17 +18,17 @@ $gap-sizes: (
 .list {
   display: flex;
   flex-flow: wrap;
-  gap: $gap-size;
+  gap: 10px;
   place-content: center;
   place-items: center;
-  margin: auto;
+  margin: 0;
   padding: 0;
   list-style: none;
   text-align: center;
 
   @each $breakpoint-key, $breakpoint-value in $breakpoints {
     @media (min-width: $breakpoint-value) {
-      @include list(map-get($gap-ratios, $breakpoint-key));
+      @include list(map-get($gap-sizes, $breakpoint-key));
     }
   }
 }
