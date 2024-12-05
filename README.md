@@ -3,13 +3,12 @@
 A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Card, Collapse, Icon, Image, Link, List for Atoms & Button, Footer, Gallery, Navbar, Slider, Title for Molecules
 
 [![NPM Version](https://badgen.net/npm/v/reactoms)](https://www.npmjs.com/package/reactoms)
+
 [![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ee9874423b24e0082a00d406627d9c2)](https://app.codacy.com/gh/philippebeck/reactoms/dashboard)
 
 [![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
 [![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
-
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ee9874423b24e0082a00d406627d9c2)](https://app.codacy.com/gh/philippebeck/reactoms/dashboard)
-[![Maintainability](https://api.codeclimate.com/v1/badges/59a03533d053fcf1ecbc/maintainability)](https://codeclimate.com/github/philippebeck/reactoms/maintainability)
 
 - [Welcome to Reactoms !](#welcome-to-reactoms-)
   - [Installation](#installation)
