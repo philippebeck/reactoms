@@ -22,9 +22,6 @@ import './gallery.scss'
  * @param {string} props.array.url
  *  The URL of the Item
  * 
- * @param {string} props.array.name
- *  The Name of the Item
- * 
  * @param {string} props.array.detail
  *  The Detail of the Item
  * 
@@ -59,21 +56,17 @@ export const Gallery =
 
     const itemProps = {
       url: item.url,
-      title: item.detail ? item.detail : undefined,
+      title: item.detail,
       design: 'link',
       content: (
         <Card
-          caption={item.caption && <Title txt={item.caption.title} />}
-          content={item.image && <Image url={item.image.url} alt={item.image.alt} />}
+          caption={<Title txt={item.caption.title} />}
+          content={<Image url={item.image.url} alt={item.image.alt} />}
         />
       )
     };
 
-    if (item.name) {
-      itemProps.content = <>{item.name}</>
-      itemProps.design = 'btn'
-
-    } else if (item.caption && item.caption.technos) {
+    if (item.caption.technos) {
       itemProps.content = (
         <Card
           caption={
@@ -86,7 +79,7 @@ export const Gallery =
               />
             </>
           }
-          content={<Image url={item.image?.url ?? ''} alt={item.image?.alt ?? ''} />}
+          content={<Image url={item.image.url ?? ''} alt={item.image.alt ?? ''} />}
         />
       );
     }
