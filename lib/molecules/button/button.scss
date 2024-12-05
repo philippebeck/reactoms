@@ -12,14 +12,14 @@
     display: none;
   }
 
-  @media (min-width: $sm) {
+  @media (min-width: $md) {
     b {
       display: block;
       text-transform: uppercase;
     }
   }
 
-  @media (min-width: $md) {
+  @media (min-width: $lg) {
     b {
       text-transform: capitalize;
     }
