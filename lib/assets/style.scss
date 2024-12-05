@@ -61,7 +61,7 @@ $transforms: (
   }
 }
 
-//! ********** MAIN **********
+//! ********** RULES **********
 
 @each $font-family in $font-families {
   @include font-face($font-family);
