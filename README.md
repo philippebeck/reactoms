@@ -4,11 +4,11 @@ A React Components Library made with TypeScript, Sass, Vite & Atomic Design : Ca
 
 [![NPM Version](https://badgen.net/npm/v/reactoms)](https://www.npmjs.com/package/reactoms)
 
-[![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ee9874423b24e0082a00d406627d9c2)](https://app.codacy.com/gh/philippebeck/reactoms/dashboard)
-
 [![GitHub Top Language](https://img.shields.io/github/languages/top/philippebeck/reactoms)](https://github.com/philippebeck/reactoms)
 [![Code Size](https://img.shields.io/github/languages/code-size/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/tree/master)
+
+[![GitHub Last Commit](https://badgen.net/github/last-commit/philippebeck/reactoms)](https://github.com/philippebeck/reactoms/commits/master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/4ee9874423b24e0082a00d406627d9c2)](https://app.codacy.com/gh/philippebeck/reactoms/dashboard)
 
 - [Welcome to Reactoms !](#welcome-to-reactoms-)
   - [Installation](#installation)
