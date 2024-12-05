@@ -1,11 +1,9 @@
 //! ********** VARIABLES **********
 
-$sm: 768px;
-$md: 1366px;
-$lg: 1920px;
+$md: 768px;
+$lg: 1366px;
 
 $breakpoints: (
-  "sm": $sm,
   "md": $md,
   "lg": $lg
 ) !default;

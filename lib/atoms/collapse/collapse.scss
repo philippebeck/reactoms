@@ -5,16 +5,11 @@
 $radius: 5px;
 $width: 50vw;
 
-$radius-ratios: (
-  "sm": 4,
-  "md": 6,
-  "lg": 8
   ) !default;
 
 $width-sizes: (
-  "sm": 40vw,
-  "md": 25vw,
-  "lg": 15vw
+  "md": 40vw,
+  "lg": 20vw
   ) !default;
 
 //! ********** MIXIN **********

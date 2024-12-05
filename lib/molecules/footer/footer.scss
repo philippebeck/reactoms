@@ -6,15 +6,13 @@ $size: 30px;
 $font: 1.2rem;
 
 $block-sizes: (
-  "sm": 15px,
-  "md": 25px,
-  "lg": 35px
+  "md": 15px,
+  "lg": 25px
 ) !default;
 
 $font-ratios: (
-  "sm": 1.6,
-  "md": 2,
-  "lg": 2.4
+  "md": 1.6,
+  "lg": 2
 ) !default;
 
 //! ********** MIXIN **********

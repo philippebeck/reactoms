@@ -2,15 +2,13 @@
 
 //! ********** VARIABLES **********
 
-$width-sizes: (
-  "sm": 15px,
-  "md": 40px,
-  "lg": 75px
+$gap-sizes: (
+  "md": 15px,
+  "lg": 60px
 ) !default;
 
 $width-ratios: (
-  "sm": 2,
-  "md": 3,
+  "md": 2,
   "lg": 4
 ) !default;
 
