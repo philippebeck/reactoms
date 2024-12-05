@@ -159,9 +159,6 @@ declare interface FooterProps {
  * @param {string} props.array.url
  *  The URL of the Item
  *
- * @param {string} props.array.name
- *  The Name of the Item
- *
  * @param {string} props.array.detail
  *  The Detail of the Item
  *
@@ -196,9 +193,6 @@ export declare const Gallery: ({ array }: GalleryProps) => React.ReactElement<HT
  * @property {string} url
  *  The URL of the Item
  *
- * @property {string} name
- *  The Name of the Item
- *
  * @property {string} detail
  *  The Detail of the Item
  *
@@ -222,13 +216,12 @@ export declare const Gallery: ({ array }: GalleryProps) => React.ReactElement<HT
  */
 declare interface GalleryItemProps {
     url: string;
-    name?: string;
-    detail?: string;
-    caption?: {
+    detail: string;
+    caption: {
         title: string;
         technos?: string[];
     };
-    image?: {
+    image: {
         url: string;
         alt: string;
     };
