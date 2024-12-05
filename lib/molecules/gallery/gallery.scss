@@ -2,37 +2,37 @@
 
 //! ********** VARIABLES **********
 
-$width-sizes: (
-  "sm": 15px,
-  "md": 40px,
-  "lg": 75px
+$gap-sizes: (
+  "md": 15px,
+  "lg": 60px
 ) !default;
 
 $width-ratios: (
-  "sm": 2,
-  "md": 3,
+  "md": 2,
   "lg": 4
 ) !default;
 
 //! ********** MIXIN **********
 
-@mixin gallery($size, $ratio) {
+@mixin gallery($gap, $ratio) {
   .collapse {
     max-width: calc(500px * $ratio);
 
     figure > .list > li {
-      width: calc((100% - $size) / $ratio
+      width: calc((100% - $gap) / $ratio
       );
     }
   }
 }
 
-//! ********** GALLERY **********
+//! ********** MAIN **********
 
 @each $breakpoint-key, $breakpoint-value in $breakpoints {
   @media (min-width: $breakpoint-value) {
 
-    @include gallery(map-get($width-sizes, $breakpoint-key),
-      map-get($width-ratios, $breakpoint-key));
+    @include gallery(
+      map-get($gap-sizes, $breakpoint-key),
+      map-get($width-ratios, $breakpoint-key)
+    );
   }
 }
