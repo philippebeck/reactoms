@@ -4,7 +4,7 @@ $radius: 10px;
 
 .card {
   margin: 0;
-  border: solid 2px $white;
+  border: solid 2px var(--white);
   border-radius: $radius;
 
   &:hover,
@@ -26,8 +26,8 @@ $radius: 10px;
     border-radius: 0 0 $radius $radius;
     padding: 5px 10px;
     height: 120px;
-    background-color: $gray;
-    color: $white;
+    background-color: var(--gray);
+    color: var(--white);
 
     & > * {
       margin: 0;
@@ -36,6 +36,6 @@ $radius: 10px;
 
   &:hover figcaption,
   &:focus figcaption {
-    color: $secondary;
+    color: var(--secondary);
   }
 }

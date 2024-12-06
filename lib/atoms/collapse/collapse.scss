@@ -8,8 +8,8 @@
   &[open] summary,
   summary:hover,
   summary:focus {
-    background-color: $white;
-    color: $gray;
+    background-color: var(--white);
+    color: var(--gray);
   }
 
   summary {
@@ -18,8 +18,8 @@
     padding: 10px;
     width: 60vw;
     list-style: none;
-    background-color: $secondary;
-    color: $black;
+    background-color: var(--secondary);
+    color: var(--black);
     cursor: pointer;
 
     :first-child {

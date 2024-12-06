@@ -4,7 +4,7 @@
   display: flex;
   place-items: center;
   gap: 10px;
-  font-family: $monospace;
+  font-family: var(--monospace);
   text-decoration: none;
-  color: $black;
+  color: var(--black);
 }
