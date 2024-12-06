@@ -1,56 +1,26 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
-
-$padding-sizes: (
-  "md": 10px,
-  "lg": 15px
-) !default;
-
-$font-sizes: (
-  "md": 1rem,
-  "lg": 1.2rem
-) !default;
-
-//! ********** MIXIN **********
-
-@mixin navbar($padding-size, $font-size) {
-  padding: $padding-size 0;
-  font-size: $font-size;
-}
-
-//! ********** MAIN **********
-
 .navbar {
   display: flex;
   place-content: space-around;
-  place-items: center;
   position: fixed;
-  z-index: 1000;
+  z-index: 1;
   top: 0;
-  box-sizing: border-box;
   padding: 5px 0;
   width: 100%;
   font-size: 0.8rem;
-  background-color: $primary;
-  color: $black;
+  background-color: var(--primary);
+  color: var(--black);
 
   ul {
     flex-flow: nowrap;
     gap: 5vw;
   }
 
-  @each $breakpoint-key, $breakpoint-value in $breakpoints {
-    @media (min-width: $breakpoint-value) {
-
-      @include navbar(
-        map-get($padding-sizes, $breakpoint-key),
-        map-get($font-sizes, $breakpoint-key)
-      );
-    }
-  }
-
   @media (min-width: $md) {
+    padding: 10px 0;
+    font-size: 1rem;
+
     & ul {
       gap: 2vw;
     }
@@ -58,5 +28,7 @@ $font-sizes: (
 
   @media (min-width: $lg) {
     place-content: space-evenly;
+    padding: 15px 0;
+    font-size: 1.2rem;
   }
 }
