@@ -1,26 +1,5 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
-
-$radius-sizes: (
-  "md": 20px,
-  "lg": 50px
-  ) !default;
-
-$width-sizes: (
-  "md": 40vw,
-  "lg": 20vw
-  ) !default;
-
-//! ********** MIXIN **********
-
-@mixin collapse($radius, $width) {
-  border-radius: $radius;
-  width: $width;
-}
-
-//! ********** MAIN **********
-
 .collapse {
   & > figure {
     margin: 20px;
@@ -45,17 +24,16 @@ $width-sizes: (
 
     :first-child {
       margin: 0;
-      padding: 1px;
     }
 
-    @each $breakpoint-key, $breakpoint-value in $breakpoints {
-      @media (min-width: $breakpoint-value) {
+    @media (min-width: $md) {
+      border-radius: 20px;
+      width: 40vw;
+    }
 
-        @include collapse(
-          map-get($radius-sizes, $breakpoint-key),
-          map-get($width-sizes, $breakpoint-key)
-        );
-      }
+    @media (min-width: $lg) {
+      border-radius: 50px;
+      width: 20vw;
     }
   }
 }

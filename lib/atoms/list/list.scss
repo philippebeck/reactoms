@@ -1,20 +1,5 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
-
-$gap-sizes: (
-  "md": 15px,
-  "lg": 20px
-  ) !default;
-
-  //! ********** MIXIN **********
-
-@mixin list($gap) {
-  gap: $gap;
-}
-
-//! ********** MAIN **********
-
 .list {
   display: flex;
   flex-flow: wrap;
@@ -26,9 +11,11 @@ $gap-sizes: (
   list-style: none;
   text-align: center;
 
-  @each $breakpoint-key, $breakpoint-value in $breakpoints {
-    @media (min-width: $breakpoint-value) {
-      @include list(map-get($gap-sizes, $breakpoint-key));
-    }
+  @media (min-width: $md) {
+    gap: 15px;
+  }
+
+  @media (min-width: $lg) {
+    gap: 20px;
   }
 }
