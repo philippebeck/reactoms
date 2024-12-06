@@ -10,6 +10,9 @@ import './footer.scss'
  *
  * @param {FooterProps} props
  *  The Properties of the Footer
+ * 
+ * @param {string} props.id
+ *  The Id of the Footer
  *
  * @param {Array<ButtonProps>} props.links
  *  The Links of the Footer
@@ -18,11 +21,14 @@ import './footer.scss'
  *  The rendered Footer
  */
 export const Footer =
-  ({ links }: FooterProps):
+  ({ id, links }: FooterProps):
   React.ReactElement<HTMLElement> => {
 
   return (
-    <footer id="contact">
+    <footer
+      id={id}
+      className="footer"
+    >
       <List
         array={links.map((item) =>
           <Button

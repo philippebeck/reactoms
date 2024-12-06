@@ -3,7 +3,7 @@
 .button {
   &:hover,
   &:focus {
-    color: $gray;
+    color: var(--gray);
     transform: scale(0.9);
     transition: all 500ms;
   }

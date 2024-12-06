@@ -1,38 +1,27 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
+$width: 500px;
+$ratio-md: 2;
+$ratio-lg: 4;
 
-$gap-sizes: (
-  "md": 15px,
-  "lg": 60px
-) !default;
-
-$width-ratios: (
-  "md": 2,
-  "lg": 4
-) !default;
-
-//! ********** MIXIN **********
-
-@mixin gallery($gap, $ratio) {
+@media (min-width: $md) {
   .collapse {
-    max-width: calc(500px * $ratio);
+    max-width: calc($width * $ratio-md);
 
     figure > .list > li {
-      width: calc((100% - $gap) / $ratio
+      width: calc((100% - 15px) / $ratio-md
       );
     }
   }
 }
 
-//! ********** MAIN **********
+@media (min-width: $lg) {
+  .collapse {
+    max-width: calc($width * $ratio-lg);
 
-@each $breakpoint-key, $breakpoint-value in $breakpoints {
-  @media (min-width: $breakpoint-value) {
-
-    @include gallery(
-      map-get($gap-sizes, $breakpoint-key),
-      map-get($width-ratios, $breakpoint-key)
-    );
+    figure > .list > li {
+      width: calc((100% - 60px) / $ratio-lg
+      );
+    }
   }
 }

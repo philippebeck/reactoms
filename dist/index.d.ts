@@ -124,23 +124,30 @@ declare interface CollapseProps {
  * @param {FooterProps} props
  *  The Properties of the Footer
  *
+ * @param {string} props.id
+ *  The Id of the Footer
+ *
  * @param {Array<ButtonProps>} props.links
  *  The Links of the Footer
  *
  * @returns {React.ReactElement<HTMLElement>}
  *  The rendered Footer
  */
-export declare const Footer: ({ links }: FooterProps) => React.ReactElement<HTMLElement>;
+export declare const Footer: ({ id, links }: FooterProps) => React.ReactElement<HTMLElement>;
 
 /**
  * ! FOOTER PROPS INTERFACE
  * @interface FooterProps
  * @description The Properties of the Footer
  *
+ * @property {string} id
+ *  The Id of the Footer
+ *
  * @property {Array<ButtonProps>} links
  *  The Links Array of the Footer
  */
 declare interface FooterProps {
+    id: string;
     links: Array<ButtonProps>;
 }
 

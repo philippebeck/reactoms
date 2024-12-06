@@ -1,60 +1,36 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
+$size-sm: 40px;
+$size-md: 50px;
+$size-lg: 60px;
 
-$size: 30px;
-$font: 1.2rem;
-
-$block-sizes: (
-  "md": 15px,
-  "lg": 25px
-) !default;
-
-$font-ratios: (
-  "md": 1.6,
-  "lg": 2
-) !default;
-
-//! ********** MIXIN **********
-
-@mixin footer($block-size, $font-ratio) {
-  width: calc($size + $block-size);
-  height: calc($size + $block-size);
-  font-size: calc($font * $font-ratio);
-}
-
-//! ********** MAIN **********
-
-[id=contact] {
-  display: flex;
-  place-content: center;
+.footer {
   padding: 20px 0;
-  width: 100%;
-  background-color: $gray;
+  background-color: var(--gray);
 
   li {
     display: flex;
-    place-content: center;
-    place-items: center;
-    border: solid 2px $silver;
+    border: solid 2px var(--silver);
     border-radius: 50%;
-    width: $size;
-    height: $size;
-    font-size: $font;
-    background-color: $white;
+    width: $size-sm;
+    height: $size-sm;
+    font-size: 2rem;
+    background-color: var(--white);
 
     i {
-      color: $gray;
+      color: var(--black);
     }
 
-    @each $breakpoint-key, $breakpoint-value in $breakpoints {
-      @media (min-width: $breakpoint-value) {
+    @media (min-width: $md) {
+      width: $size-md;
+      height: $size-md;
+      font-size: 2.5rem;
+    }
 
-        @include footer(
-          map-get($block-sizes, $breakpoint-key),
-          map-get($font-ratios, $breakpoint-key)
-        );
-      }
+    @media (min-width: $lg) {
+      width: $size-lg;
+      height: $size-lg;
+      font-size: 3rem;
     }
   }
 }

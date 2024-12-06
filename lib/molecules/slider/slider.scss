@@ -1,48 +1,5 @@
 @import '../../assets/style';
 
-//! ********** VARIABLES **********
-
-$top-sizes: (
-  "md": 56px,
-  "lg": 70px
-) !default;
-
-$left-sizes: (
-  "md": 19px,
-  "lg": 26px
-) !default;
-
-$bottom-ratios: (
-  "md": 25px,
-  "lg": 48px
-) !default;
-
-$font-ratios: (
-  "md": 2.5,
-  "lg": 3.5
-) !default;
-
-//! ********** MIXIN **********
-
-@mixin slider($top-size, $left-size, $bottom-ratio, $font-ratio) {
-  [class*="left"],
-  [class*="right"] {
-    top: calc(50% - $top-size);
-  }
-
-  [class*="play"],
-  [class*="pause"] {
-    left: calc(50% - $left-size);
-    bottom: calc(0px - $bottom-ratio);
-  }
-
-  i {
-    font-size: calc(1.5rem * $font-ratio);
-  }
-}
-
-//! ********** MAIN **********
-
 .slider {
   position: relative;
   margin: 0;
@@ -52,13 +9,17 @@ $font-ratios: (
   nav {
     i {
       position: absolute;
-      color: $white;
       cursor: pointer;
 
       &:hover,
       &:focus {
-        color: $primary;
+        color: var(--primary);
       }
+    }
+
+    [class*="left"],
+    [class*="right"] {
+      top: calc(50% - 40px);
     }
 
     [class*="left"] {
@@ -69,17 +30,42 @@ $font-ratios: (
       right: 0;
     }
 
-    @include slider(36px, 8px, 0px, 1);
+    [class*="play"],
+    [class*="pause"] {
+      left: calc(50% - 10px);
+      bottom: 0;
+    }
 
-    @each $breakpoint-key, $breakpoint-value in $breakpoints {
-      @media (min-width: $breakpoint-value) {
+    i {
+      font-size: 2rem;
+    }
 
-        @include slider(
-          map-get($top-sizes, $breakpoint-key),
-          map-get($left-sizes, $breakpoint-key),
-          map-get($bottom-ratios, $breakpoint-key),
-          map-get($font-ratios, $breakpoint-key)
-        );
+    @media (min-width: $md) {
+      [class*="play"],
+      [class*="pause"] {
+        left: calc(50% - 15px);
+        bottom: -21px;
+      }
+    
+      i {
+        font-size: 3rem;
+      }
+    }
+
+    @media (min-width: $lg) {
+      [class*="left"],
+      [class*="right"] {
+        top: calc(50% - 50px);
+      }
+    
+      [class*="play"],
+      [class*="pause"] {
+        left: calc(50% - 20px);
+        bottom: -24px;
+      }
+    
+      i {
+        font-size: 4rem;
       }
     }
   }

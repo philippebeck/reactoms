@@ -2,11 +2,9 @@
 
 .link {
   display: flex;
-  place-content: center;
   place-items: center;
   gap: 10px;
-  height: 100%;
-  font-family: $monospace;
+  font-family: var(--monospace);
   text-decoration: none;
-  color: $black;
+  color: var(--black);
 }
