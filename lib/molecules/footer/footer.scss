@@ -10,11 +10,12 @@ $size-lg: 60px;
 
   li {
     display: flex;
+    place-content: center;
     border: solid 2px var(--silver);
     border-radius: 50%;
     width: $size-sm;
     height: $size-sm;
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: var(--white);
 
     i {
@@ -24,13 +25,13 @@ $size-lg: 60px;
     @media (min-width: $md) {
       width: $size-md;
       height: $size-md;
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
 
     @media (min-width: $lg) {
       width: $size-lg;
       height: $size-lg;
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
   }
 }
